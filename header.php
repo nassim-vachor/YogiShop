@@ -30,19 +30,16 @@ catch (Exception $e)
     <body>
     	<section>
         	<header>
-        		<p><a href="reservation.php"><img src="connexion.jpg" alt="connexion"></a></p>
+        		<p><a href="reservation.php"><img src="connexion.png" alt="connexion"></a></p>
 
         		
                	<nav>
-
-               		<hr>
-
-				   <ul>
+				  <ul>
 				     
 					<li><a href="accueil.php"><strong>Accueil</strong></a></li>
 				    <li><a href="reservation.php"><strong>Reservation</strong></strong></strong></a></li>
-				    <li><a href="stade.php"><strong>Stades</strong></strong></a></li>
-				    <li><a href="contact.php"><strong>Contact</strong></a></li>
+				    <li><a href="stade.php"><strong>YogiShop</strong></strong></a></li>
+				    <li><a href="contact.php"><strong>Nous contacter</strong></a></li>
 				    
 				   </ul>
 				</nav>
