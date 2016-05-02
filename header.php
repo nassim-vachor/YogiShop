@@ -23,28 +23,41 @@ catch (Exception $e)
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+          <!-- utilisation de style.css pour les differents types d ecrans (responsives) -->
+        <link rel="stylesheet" media="screen and (min-width:1024px)"  href="grand.css" >
+        <link rel="stylesheet" media="screen and (min-width:800px) and (max-width:1024px)  "  href="moyen.css"  >
+        <link rel="stylesheet" media="screen and (min-width:300px) and (max-width:800px) "  href="petit.css"  >
+
+       
         <title>YogiShop</title>
     </head>
     <body>
     	<section>
         	<header>
-        		<p><a href="reservation.php"><img src="connexion.png" alt="connexion"></a></p>
-
-        		
+        	
+    <p><a href="reservation.php"><img src="connexion.png" class="connexButton" alt="connexion"></a></p>
                	<nav>
-				  <ul>
+				  <ul class="navBarPetit">
 				     
-					<li><a href="accueil.php"><strong>Accueil</strong></a></li>
-				    <li><a href="reservation.php"><strong>Reservation</strong></strong></strong></a></li>
-				    <li><a href="stade.php"><strong>YogiShop</strong></strong></a></li>
-				    <li><a href="contact.php"><strong>Nous contacter</strong></a></li>
+					<li class="nav-item"><a href="accueil.php"><strong>Accueil</strong></a></li>
+				    <li class="nav-item"><a href="reservation.php"><strong>Reservation</strong></strong></strong></a></li>
+				    <li class="nav-item"><a href="stade.php"><strong>YogiShop</strong></strong></a></li>
+				    <li class="nav-item"><a href="contact.php"><strong>Nous contacter</strong></a></li>
 				    
 				   </ul>
+
 				</nav>
-				  <div class="logo"></div>
+                <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+                <label for="nav-trigger"></label>
+    
+				 <div class="logo"> </div>
 
         	</header>
+
         </section>
+
+                
 		
