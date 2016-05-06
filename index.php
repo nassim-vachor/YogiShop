@@ -1,24 +1,13 @@
 <?php include("header.php"); ?> 
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <article >
-      		<hr class="bar" >
-      		<style>
-				  .carousel-inner > .item > img,
-				  .carousel-inner > .item > a > img {
-				      width: 100%;
-				     
-	      
-	  				}
-	 		</style>
-	 	
-      		<div id="car" class="container">
-				  <br>
+
+	<article id="carousel">
+	 		
+      		<div id="car" class="container" >
 				  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 				    <!-- Indicators -->
-				    <ol class="carousel-indicators">
+				   	 <ol class="carousel-indicators">
 				      <li data-target="#myCarousel" data-slide-to="0" class="active"  ></li>
 				      <li data-target="#myCarousel" data-slide-to="1" ></li>
 				      <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -27,21 +16,23 @@
 
 				    <!-- Wrapper for slides -->
 				    <div class="carousel-inner" role="listbox">
+
 				      <div class="item active">
-				        <img src="back.jpg" alt="Chania" width="460" height="345">
+				        <img src="back.jpg" alt="yoga" width="460" height="345">
 				      </div>
 
 				      <div class="item">
-				        <img src="back.jpg" alt="Chania" width="460" height="345">
+				        <img src="back.jpg" alt="yoga" width="460" height="345">
 				      </div>
 				    
 				      <div class="item">
-				        <img src="back.jpg" alt="Flower" width="460" height="345">
+				        <img src="back.jpg" alt="yoga" width="460" height="345">
 				      </div>
 
 				      <div class="item">
-				        <img src="back.jpg" alt="Flower" width="460" height="345">
+				        <img src="back.jpg" alt="yoga" width="460" height="345">
 				      </div>
+
 				    </div>
 
 				    <!-- Left and right controls -->
@@ -55,13 +46,17 @@
 				    </a>
 				  </div>
 			</div>
-		
+			
       </article>
-
         
+    </section>
 
-    <footer>
+
+    <footer id="mainFooter">
     </footer>
+    </div>
     </body>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </html>
 

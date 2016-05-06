@@ -1,0 +1,145 @@
+
+
+    /******************Responsive**********************************************/
+    /**************************************************************************/
+
+   /******************************************** header********************************************/ 
+
+.site-pusher{
+     height: 750px;
+     transition-duration: 0.3s; 
+}
+
+ header#menuTop {
+    z-index: 100;
+}
+
+ .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 91px;
+    cursor: pointer;
+}
+
+.header__icon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 3rem;
+  height: 0;
+  top: 30px;
+  left: 15px;
+  box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black;
+}
+
+header p {
+    
+  margin-top: 35px;
+  margin-right: 15px;
+}
+
+.bar {
+   margin-top: -1px;
+}
+
+.navBarPetit {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height:750px;
+  top: 0;
+  bottom: 0;
+  font-family: book;
+  background-color: #0c3559;
+  /*****pr cacher le menu****/
+  transform: translateX(-200px); 
+  transition-duration: 0.3s;
+    }
+ 
+.connexButton{
+  width: 50%;
+  float: right;
+}
+    
+.logo {
+  width: 140px;
+  margin-left: -70px;
+  margin-top:70px;
+  height: 80px;
+}
+
+nav li a {
+       
+  color: #fff ;
+  font-size: 15px;
+  font-family: book;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+
+  color:#c74438;
+  transition:400ms;
+  text-decoration: none;
+}
+
+.nav-item {
+  padding-top: 20px;
+  padding-left: 15px;
+  display: block;
+  height: 70px;
+  text-align: left;
+  line-height: 30px;
+  border-bottom: 1px solid #0c4559;
+}
+
+
+/****************************************************************************************/
+
+section#content {
+  position: relative;
+  top: 120px;
+}
+   
+
+
+footer#mainFooter {
+  margin-top: 400px;
+}
+
+
+.with--sidebar .site-pusher{
+  transform: translateX(200px); 
+  }
+   */
+ /**********************************login*****************************************/
+ 
+/*************************************************************************************************/
+
+.post { margin: 0 auto; padding-bottom: 50px; float: left; width: 960px; }
+
+
+/* Fenetre login */
+.login-popup {
+ 
+    width: 250px;
+    height: 280px;
+ 
+}
+
+
+form.signin .textbox input {
+    width: 180px;
+    height: 30px;
+}
+
+
+.button {
+    width: 180px;
+    height: 30px;
+}
+
+ /****************************************************************************************/

@@ -9,66 +9,126 @@
     body {
     background: white;
     font-family: book;
+    width: 100%;
 
 
     }
 
-    section {
-    background: #fff;
-    box-shadow: 0px 2px 2px #ebebeb;
-    }
 
-    header {
+/* header*/
+ header#menuTop {
     width: 100%;
     height: 120px; /* 120px */
     margin: 0 auto;
     text-align: center;
-    position: relative;
+    position: fixed;
     background-color: white;
-   
+    border-bottom: 10px  #0c3559 solid;
     }
 
-    header p {
+          header p {
         float: right;
-        margin-top: 25px;
-        margin-right: 47px;
     }
-    /*contact
-    header p{
 
-        float:left;
-        margin-top: 10px;
-        margin-left: 20px;
-        color: grey;
-        font-size: 30px;
-        font-family: ita
+ 
+  .bar {
+         color: #0c3559;
+         width: 100%;
+        background-color: #0c3559;
+        height: 10px;
     }
-    */
 
-    article {
+     .logo {
+  background: url(logo.png) 40% 0 no-repeat;
+
+    background-size:100% 100% ;/*220px 180px */
+    position: absolute;
+    left: 50%;
+    z-index:20;
+
+    }
+
+  /* article*/
+
+      #carousel {
         width: 100%;
-        height: 750px;
-        background: url("back2.jpg") ;
+        background: white;
         padding-top: 0px;
         background-size: cover ;   }
   
-    
-    /*article h2 {
-        opacity: 1;
-        width: 45%;
-        background-color: rgba(0,0,0,0.5);
-        font-size: 30px;
-        height: 55px;
-        margin: auto;
-        color: white;
-        padding: 14px;
-        text-align: center;
-        letter-spacing: 2px;
-        font-weight: 100;
-        box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
-        animation: fadein 3000ms ease-in;
+  .carousel-inner > .item > img,
+                  .carousel-inner > .item > a > img {
+                      width: 100%;
+                     
+                    }
+/* Pour COntact */
 
-    }*/
+
+    #planAccessSection
+    { 
+        margin-top: 5%;
+        float : left ;
+        width: 45% !important;
+        margin-right: 2%;
+      text-align: center;
+
+
+    }
+  #contactSection{
+
+        margin-top: 5%;
+        font-family: book;
+        width: 45% !important;
+        font-size: 16px;
+      margin-right: 6%;
+        margin-left: 2%;
+        float: left;
+        background-color: white !important;
+        border-style: none;
+ 
+    }
+
+#googleMap{
+
+    width: 80% !important;
+    margin-bottom: 1% !important;
+    margin : auto;
+ 
+}
+#contactSection{
+
+ text-align: center;
+
+}
+
+#email{
+    color :#d4444a;
+   
+
+}
+#adress
+{
+    color: #db0266;
+}
+
+    /* yogaInfo */
+section p{
+
+    font-size: 14px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#contactSection h1{
+    font-weight: bold;
+}
+    #yoga{
+
+        font-size: 12px !important;
+    }
+
+
+
 
    
 
@@ -76,51 +136,168 @@
         from { opacity: 0; }
         to { opacity: 1;}
     }
-    article p {
-        text-align: center;
-        color: black;
-        font-size: 30px;
-        height: 38px;
-        width: 70%;
-        margin: auto;
-        margin-top: 1%;
-    }
-    article strong{
-        color:white;
-        font-style: italic;
-    }
+  
 
-
-    table{
-        margin-top:5%;
-        margin-right: auto;
-        margin-left: auto;
-        width: 80%
-    }
-    table div{
-        color: white;
-    }
-    table th{
-        color:#3416840;
-        font-size: 30px;
-
-    }
-    
-
-    article fieldset form {
-        width: 70%;
-        }
+   
 
         #myCarousel{
             width: 100%;
-            margin-top: -40px;
+           /* margin-top: -40px; */
 
          
         }
     
-    .bar {
-         margin-top: 0;
-         color: #0c3559;
-        background-color: #0c3559;
-        height: 10px;
-    }
+
+footer#mainFooter {
+    height: 200px;
+    width: 100%;
+    background: red;
+}
+
+ footer#mainFooterContact{
+    height: 200px;
+    width: 100%;
+    background: yellow;
+}
+
+/******************************************** login ********************************************/
+/* ne sert a rien pour l'instant*//*
+.btn-sign {
+    width:900px;
+    margin-bottom:20px;
+    margin:0 auto;
+    padding:20px;
+    border-radius:5px;
+    background: -moz-linear-gradient(center top, #00c6ff, #018eb6);
+    background: -webkit-gradient(linear, left top, left bottom, from(#00c6ff), to(#018eb6));
+    background:  -o-linear-gradient(top, #00c6ff, #018eb6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#00c6ff', EndColorStr='#018eb6');
+    text-align:center;
+    font-size:36px;
+    color:#fff;
+    text-transform:uppercase;
+}
+ .post { margin: 0 auto; padding-bottom: 50px; float: left; width: 960px; }
+
+
+*/
+
+/* Mask for background, by default is not display */
+#mask {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+ 
+}
+
+/*fenetre login */
+.login-popup {
+    display: none;
+    background:#fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999;
+    /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999;
+    /* Safari, Chrome */
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+        -webkit-border-radius: 3px;
+    /* Safari, Chrome */;
+}
+
+img.btn_close {
+    
+    float: right;
+    margin: -41px -39px 0 0;
+}
+fieldset {
+    border: none;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+form.signin .textbox label {
+    display: block;
+    padding-bottom: 7px;
+}
+
+form.signin .textbox span {
+    display: block;
+}
+
+form.signin p, form.signin span {
+    color: #0c3559;
+    font-size: 18px;
+    font-family: arial;
+    margin-bottom: 5px;
+    line-height: 18px;
+}
+
+form.signin .textbox input {
+    background: #E0E0E0;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #000;
+    border-right: 1px solid #333;
+    border-top: 1px solid #000;
+    color: #fff;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 13px Arial, Helvetica, sans-serif;
+    padding: 6px 6px 4px;
+    width: 250px;
+    height: 40px;
+}
+
+form.signin input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.signin input::-webkit-input-placeholder {
+    color: #424242;
+  
+}
+.button {
+    background: #00E676;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+    border-color: #00E676;
+    border-width: 1px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    margin-top: 10px;
+    font: 12px;
+
+}
+
+.button:hover {
+    background: #00C853;
+}
+label {
+    margin-bottom: 20px;
+}
+.user {
+    width: 40%;
+}
