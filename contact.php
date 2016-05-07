@@ -28,16 +28,4 @@
 <div id="googleMap" style="width:500px;height:380px;"></div>
 </section>
 
- </section>
-
-     <footer id="mainFooterContact">
-     	<p> sssssssssssssssssssssssssssssssssss</p>
-     	<p> sssssssssssssssssssssssssssssssssss</p>
-     	<p> sssssssssssssssssssssssssssssssssss</p>
-    </footer>
-</div>
-    <!-- script pour le map -->
-    <script src="http://maps.googleapis.com/maps/api/js">/*Google Maps API*/</script> 
-   	<script type="text/javascript" src="contact.js"></script>
-    </body>
-</html>
+<?php include("footer.php"); ?>

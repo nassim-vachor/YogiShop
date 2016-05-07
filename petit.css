@@ -40,15 +40,13 @@ header p {
   margin-right: 15px;
 }
 
-.bar {
-   margin-top: -1px;
-}
+
 
 .navBarPetit {
   position: absolute;
   left: 0;
   width: 200px;
-  height:750px;
+  height:950px;
   top: 0;
   bottom: 0;
   font-family: book;
@@ -101,14 +99,10 @@ nav li a:hover {
 
 section#content {
   position: relative;
-  top: 120px;
+
 }
    
 
-
-footer#mainFooter {
-  margin-top: 400px;
-}
 
 
 .with--sidebar .site-pusher{

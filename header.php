@@ -79,6 +79,7 @@ catch (Exception $e)
 
         	</header>
         <script type="text/javascript" src="petit.js"></script>
-        <script type="text/javascript" src="connex.js"></script>  
-     <section id="content">        
+        <script type="text/javascript" src="connex.js"></script>
+        <div id="mainContainer">
+            <section id="content">        
 		

@@ -13,9 +13,8 @@ header#menuTop {
     width: 70%;
 }
 
-.bar {
-    margin-top: 0;
-}
+
+
 
 nav {
         position: absolute;
@@ -74,7 +73,7 @@ article {
 
 section#content {
     position: relative;
-    top: 120px;
+    
 }
 
 
