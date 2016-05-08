@@ -131,9 +131,30 @@ section p{
     #yoga{
 
         font-size: 12px !important;
-    }
+    } 
+#tableTarifYoga{
+float: left;
+    width: 30%;
+    margin-left: 2%;
+   
+}
+#tableTarifNaturo
+{
+    float : right;
+  width: 40%;
 
 
+}
+th {
+   text-align: center;
+   font-size: 16px;
+   color: #337ab7;
+}
+th, td {
+    padding: 5px;
+
+
+}
 
 
    
