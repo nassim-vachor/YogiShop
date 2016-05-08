@@ -75,6 +75,25 @@ section#content {
     position: relative;
     
 }
+/**************************************Contact************************************************************/
+#contactSection h1{
+    font-size: 30px;
+}
+#contactSection h2{
+    font-size: 26px;
+}
+#contactSection h3{
+    font-size: 22px;
+}
+ /* gerer la taille de la MAP*/
+ #googleMap{
+    height: 340px;
+    width: 100%;
+
+ }
+
+
+
 
 
  /******************************login*****************************/

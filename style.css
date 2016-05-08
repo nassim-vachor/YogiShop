@@ -45,7 +45,7 @@ div#mainContainer {
   
 
      .logo {
-  background: url(logo.png) 40% 0 no-repeat;
+  background: url(images/logo.png) 40% 0 no-repeat;
 
     background-size:100% 100% ;/*220px 180px */
     position: absolute;
@@ -96,7 +96,6 @@ div#mainContainer {
 
 #googleMap{
 
-    width: 80% !important;
     margin-bottom: 1% !important;
     margin : auto;
  

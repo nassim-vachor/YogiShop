@@ -25,7 +25,7 @@
 <h3 style = " color: #d4444a"> Plan d'accès </h3>
 <h4> Notre établissement est situé au Crès, derrière Leclerc Drive </h4>
 
-<div id="googleMap" style="width:500px;height:380px;"></div>
+<div id="googleMap" ></div>
 </section>
 
 <?php include("footer.php"); ?>

@@ -93,10 +93,6 @@ nav li a:hover {
   line-height: 30px;
   border-bottom: 1px solid #0c4559;
 }
-
-
-/****************************************************************************************/
-
 section#content {
   position: relative;
 
@@ -108,7 +104,54 @@ section#content {
 .with--sidebar .site-pusher{
   transform: translateX(200px); 
   }
-   */
+ 
+/**************************************contact************************************************************/
+
+
+  #contactSection{
+
+        margin-top: 3%;
+        font-family: book;
+        width: 100% !important;
+        font-size: 16px;
+      margin-right: auto;
+        margin-left: auto;
+        background-color: white !important;
+        border-style: none;
+ 
+    }
+       #planAccessSection
+    { 
+        margin-top: 1%;
+        width: 90% !important;
+        margin-right: 5%;
+        margin-left: 5%;
+      text-align: center;
+
+
+    }
+#contactSection h1{
+    font-size: 22px;
+}
+#contactSection h2{
+    font-size: 18px;
+}
+#contactSection h3{
+    font-size: 15px;
+}
+#planAccessSection h3{
+  font-size: 22px;
+}
+#planAccessSection h4{
+  font-size: 14px;
+}
+ /* gerer la taille de la MAP*/
+ #googleMap{
+    height: 250px;
+    width: 100%;
+
+ }
+
  /**********************************login*****************************************/
  
 /*************************************************************************************************/
