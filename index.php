@@ -18,19 +18,19 @@
 						    <div class="carousel-inner" role="listbox">
 
 						      <div class="item active">
-						        <img src="back.jpg" alt="yoga" width="460" height="345">
+						        <img src="images/back.jpg" alt="yoga" width="460" height="345">
 						      </div>
 
 						      <div class="item">
-						        <img src="back.jpg" alt="yoga" width="460" height="345">
+						        <img src="images/back.jpg" alt="yoga" width="460" height="345">
 						      </div>
 						    
 						      <div class="item">
-						        <img src="back.jpg" alt="yoga" width="460" height="345">
+						        <img src="images/back.jpg" alt="yoga" width="460" height="345">
 						      </div>
 
 						      <div class="item">
-						        <img src="back.jpg" alt="yoga" width="460" height="345">
+						        <img src="images/back.jpg" alt="yoga" width="460" height="345">
 						      </div>
 
 						    </div>

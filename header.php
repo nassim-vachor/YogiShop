@@ -40,7 +40,7 @@ catch (Exception $e)
         	<header id="menuTop">
              <!-- id pour la partie javascript -->
         	<a href="#" class="header__icon" id="header__icon"></a>
-            <p><a href="#login-box" class="login-window"><img src="connexion.png" class="connexButton" alt="connexion"></a></p>
+            <p><a href="#login-box" class="login-window"><img src="images/connexion.png" class="connexButton" alt="connexion"></a></p>
 
 				 <div class="logo"> </div>
                   
@@ -49,7 +49,7 @@ catch (Exception $e)
                   <ul>
                      
                     <li class="nav-item"><a href="accueil.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="reservation.php"><strong>Reservation</strong></strong></strong></a></li>
+                    <li class="nav-item"><a href="planning_gym.php"><strong>Reservation</strong></strong></strong></a></li>
                     <li class="nav-item"><a href="stade.php"><strong>YogiShop</strong></strong></a></li>
                     <li class="nav-item"><a href="contact.php"><strong>Nous contacter</strong></a></li>
                     
