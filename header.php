@@ -58,10 +58,10 @@ catch (Exception $e)
                 </nav>
            
                     <div id="login-box" class="login-popup">
-                    <a href="index.php" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+                    <a href="index.php" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
                       <form method="post" class="signin" action="#">
                             <fieldset class="textbox">
-                             <div><img  class="user" src="user.png"  title="user" alt="user" /></div>
+                             <div><img  class="user" src="images/user.png"  title="user" alt="user" /></div>
                             <label class="username">
                             <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Saisissez votre e-mail">
                             </label>

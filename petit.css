@@ -152,8 +152,29 @@ section#content {
 
  }
 
+ /**********************************YogaInfos*****************************************/
+ #yoga,#naturopathie{
+        width: 80%;
+      
+    } 
+
+    #tableTarifYoga{
+float: none;
+    width: 90%;
+    margin-left: 5%;
+   margin-right: 5%;
+}
+#tableTarifNaturo
+{
+    float : none;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+
+
+}
  /**********************************login*****************************************/
- 
 /*************************************************************************************************/
 
 .post { margin: 0 auto; padding-bottom: 50px; float: left; width: 960px; }

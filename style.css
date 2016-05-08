@@ -67,7 +67,7 @@ div#mainContainer {
                       width: 100%;
                      
                     }
-/* Pour COntact */
+/*******************************************Pour COntact *******************************************/
 
 
     #planAccessSection
@@ -115,34 +115,48 @@ div#mainContainer {
 {
     color: #db0266;
 }
-
-    /* yogaInfo */
+#contactSection h1{
+    font-weight: bold;
+}
+/********************************************yogaInfo *******************************************/
 section p{
 
     font-size: 14px;
     margin-top: 0px;
     text-align: center;
 }
+#yoga h1, #naturopathie h1{
 
-#contactSection h1{
+    text-align: left;
     font-weight: bold;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 20px;
+   color: #337ab7;
 }
-    #yoga{
+#yoga p, #naturopathie p{
+text-align: left;
+}
+    #yoga,#naturopathie{
 
-        font-size: 12px !important;
+        font-size: 20px !important;
+        padding-bottom: 2%;
+        width: 50%;
+        margin: auto;
     } 
+
 #tableTarifYoga{
 float: left;
     width: 30%;
-    margin-left: 2%;
+    margin-left: 5%;
    
 }
+
 #tableTarifNaturo
 {
     float : right;
   width: 40%;
-
-
+  margin-right: 5%;
 }
 th {
    text-align: center;
