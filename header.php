@@ -48,7 +48,7 @@ catch (Exception $e)
                         <nav class="navBarPetit">
                   <ul>
                      
-                    <li class="nav-item"><a href="accueil.php"><strong>Accueil</strong></a></li>
+                    <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
                     <li class="nav-item"><a href="reservation.php"><strong>Reservation</strong></strong></strong></a></li>
                     <li class="nav-item"><a href="yogaInfo.php"><strong>YogiShop</strong></strong></a></li>
                     <li class="nav-item"><a href="contact.php"><strong>Nous contacter</strong></a></li>
