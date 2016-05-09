@@ -119,54 +119,38 @@ div#mainContainer {
     font-weight: bold;
 }
 /********************************************yogaInfo *******************************************/
-section p{
 
-    font-size: 14px;
-    margin-top: 0px;
-    text-align: center;
-}
-#yoga h1, #naturopathie h1{
+#yoga div h1, #naturopathie div
+h1{
 
     text-align: left;
     font-weight: bold;
-    margin-left: 20%;
-    margin-right: 20%;
-    font-size: 20px;
    color: #337ab7;
+   margin-top: 0px;
 }
-#yoga p, #naturopathie p{
-text-align: left;
+.textYoga p ,.textNaturo p {
+    text-align: left;
 }
-    #yoga,#naturopathie{
 
-        font-size: 20px !important;
-        padding-bottom: 2%;
-        width: 50%;
-        margin: auto;
+    #yoga{
+        width: 100%;
+       
     } 
 
-#tableTarifYoga{
-float: left;
-    width: 30%;
-    margin-left: 5%;
-   
-}
+    #naturopathie{
 
-#tableTarifNaturo
-{
-    float : right;
-  width: 40%;
-  margin-right: 5%;
-}
+        padding-bottom: 2%;
+        width: 100%;    
+        margin-top: 10px;
+    } 
+
 th {
    text-align: center;
-   font-size: 16px;
    color: #337ab7;
+   padding: 5px;
 }
-th, td {
+ td {
     padding: 5px;
-
-
 }
 
 
@@ -292,7 +276,7 @@ form.signin .textbox input {
     border-left: 1px solid #000;
     border-right: 1px solid #333;
     border-top: 1px solid #000;
-    color: #fff;
+    color: #111;
     border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;

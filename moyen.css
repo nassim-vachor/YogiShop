@@ -125,3 +125,72 @@ form.signin input::-webkit-input-placeholder {
 }
 
  /****************************************************************************************/
+/********************************************yogaInfo *******************************************/
+
+#yoga div h1, #naturopathie div
+h1{
+    font-size: 26px;
+}
+.textYoga p ,.textNaturo p {
+    font-size: 18px;
+}
+
+    #yoga{
+        height: 250px;
+         margin-top: 7%;
+    
+    } 
+
+    #naturopathie{
+
+        height: 200px;
+        } 
+
+.yogaImage{
+
+width: 35%;
+float: left;
+ margin-left: 5%;
+
+}
+.textYoga{
+    float: right;
+    width: 50%;
+    margin-right: 5%;
+}
+.naturoImage{
+    width: 35%;
+    float: left;
+     margin-left: 5%;
+}
+.textNaturo{
+    float: right;
+    width: 50%;
+    margin-right: 5%;
+}
+#tableTarifYoga{
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+   
+}
+
+#tableTarifNaturo
+{
+float : right;
+  width: 40%;
+  margin-right: 5%;
+  margin-bottom: 10px;
+}
+
+th {
+
+   font-size: 26px;
+    }
+
+ td {
+
+    font-size: 18px;
+
+}

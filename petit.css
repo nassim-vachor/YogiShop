@@ -201,3 +201,72 @@ form.signin .textbox input {
 }
 
  /****************************************************************************************/
+  /********************************************yogaInfo *******************************************/
+
+#yoga div h1, #naturopathie div
+h1{
+
+    font-size: 18px;
+
+}
+.textYoga p ,.textNaturo p {
+    font-size: 14px;
+}
+
+    #yoga{
+
+    
+        margin: auto;
+      
+    } 
+
+    #naturopathie{
+
+        margin: auto;
+    } 
+
+
+  .yogaImage{
+
+  width: 100%;
+
+  margin-top: 15%
+
+}
+.textYoga{
+    width: 100%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+.naturoImage{
+    width: 100%;
+
+     margin-top: 20px;
+}
+.textNaturo{
+    width: 100%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+  
+#tableTarifYoga{
+    width: 100%;
+    margin-bottom: 10px;
+   
+}
+
+#tableTarifNaturo
+{
+  width: 90%;
+  margin-bottom: 10px;
+}
+th {
+   
+   font-size: 18px;
+
+}
+ td {
+ 
+    font-size: 13px;
+
+}
