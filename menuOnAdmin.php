@@ -31,10 +31,10 @@ catch (Exception $e)
                   <ul>
                      
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Reservation</strong></strong></strong></a></li>
-                    <li class="nav-item"><a href="gestionAbonnement.php"><strong>Gestion Abonnements</strong></strong></a></li>
+                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Reservation</strong></a></li>
+                    <li class="nav-item"><a href="gestionAbonnement.php"><strong>Gestion Abonnements</strong></a></li>
                     <li class="nav-item"><a href="adherents.php"><strong>Adhérents</strong></a></li>
-                     <li class="nav-item"><a href="souscription.php"><strong>Souscription</strong></strong></a></li>
+                     <li class="nav-item"><a href="souscription.php"><strong>Souscription</strong></a></li>
                     <li class="nav-item"><a href="statistiques.php"><strong>Statistiques</strong></a></li>
                     
                    </ul>

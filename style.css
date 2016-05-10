@@ -27,6 +27,18 @@
           header p {
         float: right;
     }
+ #userProfil{
+ 
+    float: left;
+    padding-bottom: 0px;
+    color: #046380 ;
+    font-family: book;
+
+}
+
+#userProfil img{
+  vertical-align:bottom;
+  }
 
  
  /****************************************************************************************/

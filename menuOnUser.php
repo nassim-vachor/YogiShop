@@ -1,29 +1,30 @@
+
 <?php
 
-try
 
-{
+       require_once("connectdb.php");
+       $dbh = connect();
 
-    //$bdd = new PDO('mysql:host=127.12.109.130;dbname=php;charset=utf8', 'adminC3gxq8w', 'zt2Bn5kcHRit');
-
-
-}
-
-catch (Exception $e)
-
-{
-
-        die('Erreur : ' . $e->getMessage());
-
-}
 
 ?>
 
 
         	<header id="menuTop">
+
              <!-- id pour la partie javascript -->
         	<a href="#" class="header__icon" id="header__icon"></a>
+
+            <!-- recuperation du nom de la personne pour afficher son profil -->
+            
+            <?php 
+            $id= $_COOKIE["id"];
+            $reponse = $dbh->query("SELECT Nom from person where idPerson= '$id'");
+            $row= $reponse->fetch();
+             $Nom=$row['Nom'];
+            ?>
+            <p id="userProfil"><img src="images/userProfil.png"  alt="Bienvenue"><?php echo $Nom ?></p>
             <a href="deconnexion.php"><p class="btn">Déconnexion</p></a>
+
 
 				 <div class="logo"> </div>
                   
