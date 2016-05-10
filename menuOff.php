@@ -21,7 +21,7 @@
            
                     <div id="login-box" class="login-popup">
                     <a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-                      <form method="post" action="login.php" class="signin" >
+                      <form method="post" action="login.php" class="signin">
                             <fieldset class="textbox">
                              <div><img  class="user" src="images/user.png"  title="user" alt="user" /></div>
                             <label class="username">
@@ -32,7 +32,7 @@
                             <input id="password" name="password" value="" type="password" placeholder="Mot de passe">
                             </label>
                             
-                            <button class="submit button" name="connecter" type="button">Connexion</button>
+                            <button class="submit button" name="connecter" type="submit">Connexion</button>
                             
                             </fieldset>
                       </form>
