@@ -5,11 +5,12 @@
 
         if(empty($_POST['username'])|| empty($_POST['password']))
 			{
-					 $message = '<p>une erreur s\'est produite pendant votre identification.
-						Vous devez remplir tous les champs</p>
-						<p>Cliquez <a href="connexion.php">ici</a> pour revenir</p>';
-						echo $message;
+				?>	
+					<script language="javascript">
+						document.getElementById("login_error").innerHTML = "bonjour"
+					</script>
 
+				<?php
              	}
 
              
@@ -17,14 +18,17 @@
 			    
              	else 
              	{
-             		$email=$_POST['username'];
-			       	$pwd= sha1($_POST['password']);
+							//$email=trim($_POST['email']);     
+					 $reponse=$dbh->prepare('SELECT idPerson
+									FROM Person WHERE email=? and password=?');
+					 $reponse->execute(array($_POST['username'],$_POST['password']));
+					 
 
-
-             		  $sql = $dbh->query("SELECT * FROM Person WHERE email = '$email' AND password = '$pwd'");
-		              $rowCount=$sql->rowCount();
+					 	$reponse2=$reponse->rowCount();  // compte le nombre de ligne retourne par le select 
+					 	//echo $reponse;
+					 
 						
-					if ($rowCount ==0)  //  pas de ligne retournée
+					if ($reponse2 ==0)  //  pas de ligne retournée
 					{
 
 						echo 'Email ou Mot de passe incorrecte';
@@ -34,7 +38,7 @@
 					//header('location:'.$_SERVER["HTTP_REFERER"]);
 					else // utilisateur trouvee 
 					{
-                             $row =$sql->fetch();
+                             $row =$reponse->fetch();
 
                             // utilisateur trouvé, maintenant on va créer les cookies (s'il n'existe pas)
                             if(!isset($_COOKIE["idPerson"]) and !isset($_COOKIE["token"])) 
@@ -54,6 +58,9 @@
 			                  header('location:index.php');
 			              		}
           			}
+
+					
+			
 
 
 			}

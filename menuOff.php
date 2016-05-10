@@ -21,9 +21,10 @@
            
                     <div id="login-box" class="login-popup">
                     <a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-                      <form method="post" action="login.php" class="signin">
+                      <form method="" action="" class="signin" >
                             <fieldset class="textbox">
                              <div><img  class="user" src="images/user.png"  title="user" alt="user" /></div>
+                             <span id="login_error" style="color: red; font-size:12px"></span>
                             <label class="username">
                             <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Saisissez votre e-mail">
                             </label>
@@ -32,8 +33,8 @@
                             <input id="password" name="password" value="" type="password" placeholder="Mot de passe">
                             </label>
                             
-                            <button class="submit button" name="connecter" type="submit">Connexion</button>
-                            
+                            <button class="submit button" name="connecter" type="submit" onClick="login(); return false;">Connexion</button>
+                            <span id="login_error2" style="color: red;"></span>
                             </fieldset>
                       </form>
               
