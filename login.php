@@ -3,13 +3,14 @@
 	include("connectdb.php"); 
 	$message='';
 
-        if(isset($_POST['username'])|| isset($_POST['password']))
+        if(empty($_POST['username'])|| empty($_POST['password']))
 			{
-					 $message = '<p>une erreur s\'est produite pendant votre identification.
-						Vous devez remplir tous les champs</p>
-						<p>Cliquez <a href="connexion.php">ici</a> pour revenir</p>';
-						echo $message;
+				?>	
+					<script language="javascript">
+						document.getElementById("login_error").innerHTML = "bonjour"
+					</script>
 
+				<?php
              	}
 
              
@@ -19,7 +20,7 @@
              	{
 							//$email=trim($_POST['email']);     
 					 $reponse=$dbh->prepare('SELECT idPerson
-									FROM Person WHERE email=? and motDePasse=?');
+									FROM Person WHERE email=? and password=?');
 					 $reponse->execute(array($_POST['username'],$_POST['password']));
 					 
 
@@ -59,7 +60,7 @@
           			}
 
 					
-				}
+			
 
 
 			}
