@@ -3,7 +3,7 @@ header#menuTop {
     z-index: 10000000;
 }
 
- header p {
+ .btOn {
     margin-top: 20px;
     margin-right: 0.1%;
 }
@@ -65,6 +65,25 @@ nav {
     height: 140px;
 }
 
+.btn {
+  background: #49c0eb;
+  background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -ms-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -o-linear-gradient(top, #49c0eb, #020d45);
+  background-image: linear-gradient(to bottom, #49c0eb, #020d45);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  margin-right: 3%;
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 4px 20px 4px 20px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+}
 
  /****************************************************************************************/
 article {
