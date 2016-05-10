@@ -34,7 +34,7 @@
   box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black;
 }
 
-header p {
+.btOn{
     
   margin-top: 35px;
   margin-right: 15px;
@@ -59,6 +59,27 @@ header p {
 .connexButton{
   width: 50%;
   float: right;
+}
+
+
+ .btn {
+  background: #49c0eb;
+  background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -ms-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -o-linear-gradient(top, #49c0eb, #020d45);
+  background-image: linear-gradient(to bottom, #49c0eb, #020d45);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  margin-right: 3%;
+  margin-top: 35px;
+  font-size: 14px;
+  padding: 3px 18px 3px 18px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
 }
     
 .logo {

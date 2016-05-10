@@ -23,7 +23,7 @@ catch (Exception $e)
         	<header id="menuTop">
              <!-- id pour la partie javascript -->
         	<a href="#" class="header__icon" id="header__icon"></a>
-            <p><a href="#login-box" class="login-window"><img src="images/connexion.png" class="connexButton" alt="connexion"></a></p>
+            <p class="btn"><a href="#login-box" class="login-window" ></a> Déconnexion</p>
 
 				 <div class="logo"> </div>
                   

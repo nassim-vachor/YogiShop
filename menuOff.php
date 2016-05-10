@@ -2,7 +2,7 @@
         	<header id="menuTop">
              <!-- id pour la partie javascript -->
         	<a href="#" class="header__icon" id="header__icon"></a>
-            <p><a href="#login-box" class="login-window"><img src="images/connexion.png" class="connexButton" alt="connexion"></a></p>
+            <p class="btOn"><a href="#login-box" class="login-window"><img src="images/connexion.png" class="connexButton" alt="connexion"></a></p>
 
 				 <div class="logo"> </div>
                   
