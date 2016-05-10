@@ -25,8 +25,10 @@
             else 
             {
                // la personne est connectée => button connexion
-                
-                $requete = $dbh->query("SELECT idPerson FROM Person WHERE EstAdmin = '$id'");
+
+                // on selectionne les admin 
+
+                $requete = $dbh->query("SELECT idPerson FROM Person WHERE $id = idPerson and EstAdmin = 1");
                 $row =$requete->fetch();
 
                 // verification du type de personne : admin ou adherent
