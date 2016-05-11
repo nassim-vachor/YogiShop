@@ -122,6 +122,20 @@ nav {
   border: solid #1f628d 0px;
   text-decoration: none;
 }
+
+#userProfil{
+    margin-top: 25px;
+    margin-left: 1%;
+    font-size: 18px;
+
+
+}
+#userProfil img{
+
+    width : 32px; 
+   height :32px; 
+  
+}
 /******************************************** login ********************************************/
 
 /* fenetre login  */
