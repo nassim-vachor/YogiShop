@@ -9,9 +9,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
  
           <!-- utilisation de style.css pour les differents types d ecrans (responsives) -->
-        <link rel="stylesheet" media="screen and (min-width:1024px)"  href="grand.css" >
-        <link rel="stylesheet" media="screen and (min-width:750px) and (max-width:1024px)  "  href="moyen.css"  >
-        <link rel="stylesheet" media="screen and  (max-width:750px) "  href="petit.css"  >
+        <link rel="stylesheet" media="screen and (min-width:1200px)"  href="grand.css" >
+        <link rel="stylesheet" media="screen and (min-width:770px) and (max-width:1200px)  "  href="moyen.css"  >
+        <link rel="stylesheet" media="screen and  (max-width:770px) "  href="petit.css"  >
 
        
         <title>YogiShop Infos</title>
