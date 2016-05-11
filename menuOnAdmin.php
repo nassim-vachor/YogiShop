@@ -23,19 +23,19 @@ catch (Exception $e)
         	<header id="menuTop">
              <!-- id pour la partie javascript -->
         	<a href="#" class="header__icon" id="header__icon"></a>
-           <a href="deconnexion.php"><p class="btn">Déconnexion</p></a>
+           <a href="deconnexion.php"><p class="btn" id="btnAdmin">Déconnexion</p></a>
 				 <div class="logo"> </div>
                   
         
                         <nav class="navBarPetit">
                   <ul>
                      
-                    <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Reservation</strong></a></li>
-                    <li class="nav-item"><a href="gestionAbonnement.php"><strong>Gestion Abonnements</strong></a></li>
-                    <li class="nav-item"><a href="adherents.php"><strong>Adhérents</strong></a></li>
-                     <li class="nav-item"><a href="souscription.php"><strong>Souscription</strong></a></li>
-                    <li class="nav-item"><a href="statistiques.php"><strong>Statistiques</strong></a></li>
+                    <li class="nav-item" id="navAdmin"><a href="index.php"><strong>Accueil</strong></a></li>
+                    <li class="nav-item" id="navAdmin"><a href="reservationAdmin.php"><strong>Reservation</strong></a></li>
+                    <li class="nav-item" id="navAdmin"><a href="gestionAbonnement.php"><strong>Abonnements</strong></a></li>
+                    <li class="nav-item" id="navAdmin"><a href="adherents.php"><strong>Adhérents</strong></a></li>
+                    <li class="nav-item" id="navAdmin"><a href="souscription.php"><strong>Souscription</strong></a></li>
+                    <li class="nav-item" id="navAdmin"><a href="statistiques.php"><strong>Statistiques</strong></a></li>
                     
                    </ul>
 

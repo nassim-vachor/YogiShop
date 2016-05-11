@@ -4,7 +4,7 @@
 		    <footer id="mainFooter">
 		    </footer>
     </div>
-        <script src="http://maps.googleapis.com/maps/api/js">/*Google Maps API*/</script> 
+    <script src="http://maps.googleapis.com/maps/api/js">/*Google Maps API*/</script> 
    	<script type="text/javascript" src="contact.js"></script>
    	<script type="text/javascript" src="js/js.cookie-2.1.1.min.js"></script>
    	<script type="text/javascript" src="js/main.js"></script>

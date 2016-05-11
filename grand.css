@@ -21,7 +21,44 @@ header#menuTop {
     margin-top: 20px;
     height: 170px;
  }
- nav {
+
+/***********************menu admin**********************************************************************/
+     nav #navAdmin{
+        width: 10%;
+        list-style-type: none;
+
+    }
+    nav #navAdmin a{
+        font-size: 16px;
+
+    }
+       #navAdmin:nth-child(2){
+          margin-right: 5%;
+          margin-left: 5%;
+
+    }
+      #navAdmin:nth-child(3){
+      margin-right: 10%;
+      margin-left: 0px;
+
+    }
+     
+     #navAdmin:nth-child(4){
+      margin-left:10%;
+      margin-right: 5%;
+
+    }
+     #navAdmin:nth-child(5){
+      margin-right: 5%;
+
+    }
+    #btnAdmin {
+
+   margin-top: 25px;
+    margin-right: 1%;
+    }
+/************************************MenuOFFgrand*****************************************************************/
+nav {
         position: absolute;
         bottom: 18px;
         width: 100%;
@@ -62,6 +99,10 @@ header#menuTop {
     nav li:nth-child(3) {
     margin-left:10%;
     }
+
+   
+
+    /*button deconnexion*/
  .btn {
   background: #49c0eb;
   background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
