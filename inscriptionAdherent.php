@@ -74,7 +74,7 @@
                     </div>
                         <br>
 
-                        <button type="submit" >Inscrire</button><br><br>
+                        <button type="submit" id="insc" >Inscrire</button><br><br>
                     </div>
                         </div>
                         </form>

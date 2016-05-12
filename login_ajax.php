@@ -4,7 +4,7 @@ require_once("services/login.php");
 
 //Etape 1: on recupere les logins
 $username = $_POST["username"]; 
-$password = $_POST["password"];
+$password = sha1($_POST["password"]);
 
 //$token = login($username, $password);
 $res = login($username, $password);
