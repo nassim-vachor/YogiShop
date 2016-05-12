@@ -1,45 +1,95 @@
+
 /******************************************** header********************************************/
 header#menuTop {
     z-index: 10000000;
+    }
+
+.btOn {
+
+   margin-top: 25px;
+    margin-right: 3.5%;
+    }
+
+.connexButton
+{
+    width: 80%;
 }
 
- .btOn {
+ .logo {
+    width: 270px;
+    margin-left: -135px;
     margin-top: 20px;
-    margin-right: 0.1%;
-}
+    height: 170px;
+ }
 
-.connexButton{
-
-    width: 70%;
-}
-/************************menu admin**********************************************************************/
-     nav #navAdmin{
+/***********************menu admin**********************************************************************/
+     nav ul#navAdmin li{
         width: 10%;
         list-style-type: none;
 
-    }
-    nav #navAdmin a{
-        font-size: 15px;
 
     }
-       #navAdmin:nth-child(2){
-          margin-right: 3%;
-          margin-left: 3%;
+    nav ul#navAdmin li a{
+        font-size: 16px;
+        display:block;
 
     }
-      #navAdmin:nth-child(3){
-      margin-right: 14%;
+    ul#navAdmin li ul {
+      position: relative;
+      display: none;
+      opacity: 0;
+      background-color:#2c4271
+
+    }
+    ul#navAdmin li:hover ul {
+      display:block;
+      opacity: 1;
+      transition:opacity 1000ms 1000ms;
+
+      
+        }
+  ul#navAdmin li:hover ul li {
+  float:none;
+  text-align: left;
+  width: 100%;
+  padding: 7px;
+ 
+     
+  }
+   ul#navAdmin li:hover ul li a:hover {
+    color: grey;  
+  }
+
+  ul#navAdmin li:hover ul li a {
+  font-size: 13px;
+  color: #fff;
+  height: 20px;
+  }
+ 
+
+  ul#navAdmin > li > ul {
+    
+       position:absolute;
+    }
+ 
+       ul#navAdmin > li:nth-child(2){
+          margin-right: 5%;
+          margin-left: 5%;
+
+    }
+      ul#navAdmin > li:nth-child(3){
+      margin-right: 10%;
       margin-left: 0px;
 
     }
      
-     #navAdmin:nth-child(4){
-      margin-left:14%;
-      margin-right: 3%;
+     ul#navAdmin > li:nth-child(4){
+      margin-left:10%;
+      margin-right: 5%;
 
     }
-     #navAdmin:nth-child(5){
-      margin-right: 3%;
+     ul#navAdmin > li:nth-child(5){
+      margin-right: 5%;
 
     }
     #btnAdmin {
@@ -47,23 +97,22 @@ header#menuTop {
    margin-top: 25px;
     margin-right: 1%;
     }
-
-/***********************************************************************************************************/
-
+/************************************MenuOFFgrand*****************************************************************/
 nav {
         position: absolute;
-        bottom: 18px;
+        top: 70px;
         width: 100%;
     }
 
-    nav ul {
+   /* nav ul {
         bottom: 10px;
-    }
+    }*/
 
      nav li{
     float: left;
     list-style-type: none;
     width: 20%;
+
     
     }
    
@@ -75,6 +124,7 @@ nav {
         font-family: book;
         letter-spacing: 2px;
         text-decoration: none;
+         height: 40px;
 
     }
     nav li a:hover {
@@ -88,18 +138,14 @@ nav {
     margin-right: 10%;
     }
 
-    nav li:nth-child(3) {
+    nav > ul > li:nth-child(3) {
     margin-left:10%;
     }
 
-.logo {
-    width: 200px;
-    margin-left: -100px;
-    margin-top: 35px;
-    height: 140px;
-}
+   
 
-.btn {
+    /*button deconnexion*/
+ .btn {
   background: #49c0eb;
   background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
   background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
@@ -111,105 +157,77 @@ nav {
   border-radius: 7px;
   font-family: Arial;
   color: #ffffff;
-  margin-right: 3%;
-  margin-top: 20px;
+  margin-right: 5%;
+  margin-top: 25px;
   font-size: 14px;
-  padding: 4px 18px 4px 18px;
+  padding: 5px 25px 5px 25px;
   border: solid #1f628d 0px;
   text-decoration: none;
 }
 
 #userProfil{
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 1%;
-    font-size: 16px;
+    font-size: 20px;
+
+
+
 }
-
 #userProfil img{
-
     width : 32px; 
    height :32px; 
   
 }
- /****************************************************************************************/
-article {
-    height: 750px;
-}
+/******************************************** login ********************************************/
 
-section#content {
-    position: relative;
-    
-}
-/**************************************Contact************************************************************/
-#contactSection h1{
-    font-size: 30px;
-}
-#contactSection h2{
-    font-size: 26px;
-}
-#contactSection h3{
-    font-size: 22px;
-}
- /* gerer la taille de la MAP*/
- #googleMap{
-    height: 340px;
-    width: 100%;
-
- }
-
-
-
-
-
- /******************************login*****************************/
 /* fenetre login  */
 .login-popup {
     width: 350px;
     height: 350px;
 }
 
-form.signin .textbox input { 
+form.signin .textbox input {
+
     width: 250px;
     height: 40px;
 }
 
-
-form.signin input:-moz-placeholder {
-    color: #bbb;
-    text-shadow: 0 0 2px #000;
-}
-
-form.signin input::-webkit-input-placeholder {
-    color: #424242;
-  
-}
-
-.button {
+.button {  
     width: 250px;
     height: 40px;
 }
 
- /****************************************************************************************/
-/********************************************yogaInfo *******************************************/
+ /**************************************MAP************************************************************/
+ /* gerer la taille de la MAP*/
+ #googleMap{
+    height: 380px;
+    width: 80%;
+
+ }
+ /********************************************yogaInfo *******************************************/
 
 #yoga div h1, #naturopathie div
 h1{
-    font-size: 26px;
+
+    font-size: 30px;
+
 }
 .textYoga p ,.textNaturo p {
-    font-size: 18px;
+    font-size: 22px;
 }
 
     #yoga{
-        height: 250px;
          margin-top: 7%;
-    
+   
+        height: 350px;
+      
     } 
 
     #naturopathie{
 
-        height: 200px;
-        } 
+        height: 300px;
+    } 
+
 
 .yogaImage{
 
@@ -248,14 +266,13 @@ float : right;
   margin-right: 5%;
   margin-bottom: 10px;
 }
-
 th {
+   
+   font-size: 30px;
 
-   font-size: 26px;
-    }
-
+}
  td {
-
-    font-size: 18px;
+ 
+    font-size: 22px;
 
 }

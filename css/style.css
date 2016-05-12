@@ -3,7 +3,7 @@
 
     @font-face { 
   font-family: 'book'; 
-  src: url('Uni-Sans-Book.otf'); 
+  src: url('../fontBook/Uni-Sans-Book.otf'); 
     }
 
     body {
@@ -21,7 +21,7 @@
     text-align: center;
     position: fixed;
     background-color: white;
-    border-bottom: 10px  #0c3559 solid;
+    border-bottom: 10px  #2c4271 solid;
     }
 
           header p {
@@ -33,6 +33,7 @@
     padding-bottom: 0px;
     color: #046380 ;
     font-family: book;
+    font-weight: bold;
 
 }
 
@@ -57,12 +58,12 @@ div#mainContainer {
   
 
      .logo {
-  background: url(images/logo.png) 40% 0 no-repeat;
+  background: url(../images/logo.png) 40% 0 no-repeat;
 
     background-size:100% 100% ;/*220px 180px */
     position: absolute;
     left: 50%;
-    z-index:20;
+
 
     }
 

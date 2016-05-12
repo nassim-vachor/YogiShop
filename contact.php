@@ -4,14 +4,14 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css-Bootstrap/bootstrap.css">
+         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
  
           <!-- utilisation de style.css pour les differents types d ecrans (responsives) -->
-        <link rel="stylesheet" media="screen and (min-width:1200px)"  href="grand.css" >
-        <link rel="stylesheet" media="screen and (min-width:770px) and (max-width:1200px)  "  href="moyen.css"  >
-        <link rel="stylesheet" media="screen and  (max-width:770px) "  href="petit.css"  >
+        <link rel="stylesheet" media="screen and (min-width:1200px)"  href="css/grand.css" >
+        <link rel="stylesheet" media="screen and (min-width:770px) and (max-width:1200px)  "  href="css/moyen.css"  >
+        <link rel="stylesheet" media="screen and  (max-width:770px) "  href="css/petit.css"  >
 
        
         <title>Contact</title>

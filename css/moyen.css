@@ -1,0 +1,331 @@
+/******************************************** header********************************************/
+header#menuTop {
+    z-index: 10000000;
+}
+
+ .btOn {
+    margin-top: 20px;
+    margin-right: 0.1%;
+}
+
+.connexButton{
+
+    width: 70%;
+}
+/************************menu admin**********************************************************************/
+ nav ul#navAdmin li{
+        width: 10%;
+        list-style-type: none;
+
+
+    }
+    nav ul#navAdmin li a{
+        font-size: 15px;
+        display:block;
+
+    }
+    ul#navAdmin li ul {
+      position: relative;
+      display: none;
+      opacity: 0;
+      background-color:#2c4271
+
+    }
+    ul#navAdmin li:hover ul {
+      display:block;
+      opacity: 1;
+      transition:opacity 1000ms 1000ms;
+
+      
+        }
+  ul#navAdmin li:hover ul li {
+  float:none;
+  text-align: left;
+  width: 100%;
+  padding: 7px;
+ 
+     
+  }
+  ul#navAdmin li:hover ul li a {
+  font-size: 12px;
+  color: #fff;
+  height: 20px;
+  }
+  ul#navAdmin li:hover ul li a:hover {
+    color: grey;  
+  }
+
+  ul#navAdmin > li > ul {
+    
+       position:absolute;
+    }
+ 
+       ul#navAdmin > li:nth-child(2){
+          margin-right: 3%;
+          margin-left: 3%;
+
+    }
+      ul#navAdmin > li:nth-child(3){
+      margin-right: 14%;
+      margin-left: 0px;
+
+    }
+     
+     ul#navAdmin > li:nth-child(4){
+      margin-left:14%;
+      margin-right: 3%;
+
+    }
+     ul#navAdmin > li:nth-child(5){
+      margin-right: 3%;
+
+    }
+    /*
+    #btnAdmin {
+
+   margin-top: 25px;
+    margin-right: 1%;
+    }
+     nav #navAdmin{
+        width: 10%;
+        list-style-type: none;
+
+    }
+    nav #navAdmin a{
+        font-size: 15px;
+
+    }
+       #navAdmin:nth-child(2){
+          margin-right: 3%;
+          margin-left: 3%;
+
+    }
+      #navAdmin:nth-child(3){
+      margin-right: 14%;
+      margin-left: 0px;
+
+    }
+     
+     #navAdmin:nth-child(4){
+      margin-left:14%;
+      margin-right: 3%;
+
+    }
+     #navAdmin:nth-child(5){
+      margin-right: 3%;
+
+    }
+    #btnAdmin {
+
+   margin-top: 25px;
+    margin-right: 1%;
+    }
+*/
+/***********************************************************************************************************/
+
+nav {
+        position: absolute;
+        top: 70px;
+        width: 100%;
+    }
+
+     nav li{
+    float: left;
+    list-style-type: none;
+    width: 20%;
+    
+    }
+   
+   
+    nav li a {
+        margin-top: 2%;
+        color: #046380 ;
+        font-size: 18px;
+        font-family: book;
+        letter-spacing: 2px;
+        text-decoration: none;
+        height: 40px;
+
+    }
+    nav li a:hover {
+        text-decoration: none;
+        color:#183152 ;
+        transition:400ms;
+    }
+    
+
+    nav li:nth-child(2) {
+    margin-right: 10%;
+    }
+
+    nav > ul > li:nth-child(3) {
+    margin-left:10%;
+    }
+
+.logo {
+    width: 200px;
+    margin-left: -100px;
+    margin-top: 35px;
+    height: 140px;
+}
+
+.btn {
+  background: #49c0eb;
+  background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -ms-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -o-linear-gradient(top, #49c0eb, #020d45);
+  background-image: linear-gradient(to bottom, #49c0eb, #020d45);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  margin-right: 3%;
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 4px 18px 4px 18px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+}
+
+#userProfil{
+    margin-top: 20px;
+    margin-left: 1%;
+    font-size: 16px;
+}
+
+#userProfil img{
+
+    width : 32px; 
+   height :32px; 
+  
+}
+ /****************************************************************************************/
+article {
+    height: 750px;
+}
+
+section#content {
+    position: relative;
+    
+}
+/**************************************Contact************************************************************/
+#contactSection h1{
+    font-size: 30px;
+}
+#contactSection h2{
+    font-size: 26px;
+}
+#contactSection h3{
+    font-size: 22px;
+}
+ /* gerer la taille de la MAP*/
+ #googleMap{
+    height: 340px;
+    width: 100%;
+
+ }
+
+
+
+
+
+ /******************************login*****************************/
+/* fenetre login  */
+.login-popup {
+    width: 350px;
+    height: 350px;
+}
+
+form.signin .textbox input { 
+    width: 250px;
+    height: 40px;
+}
+
+
+form.signin input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.signin input::-webkit-input-placeholder {
+    color: #424242;
+  
+}
+
+.button {
+    width: 250px;
+    height: 40px;
+}
+
+ /****************************************************************************************/
+/********************************************yogaInfo *******************************************/
+
+#yoga div h1, #naturopathie div
+h1{
+    font-size: 26px;
+}
+.textYoga p ,.textNaturo p {
+    font-size: 18px;
+}
+
+    #yoga{
+        height: 250px;
+         margin-top: 7%;
+    
+    } 
+
+    #naturopathie{
+
+        height: 200px;
+        } 
+
+.yogaImage{
+
+width: 35%;
+float: left;
+ margin-left: 5%;
+
+}
+.textYoga{
+    float: right;
+    width: 50%;
+    margin-right: 5%;
+}
+.naturoImage{
+    width: 35%;
+    float: left;
+     margin-left: 5%;
+}
+.textNaturo{
+    float: right;
+    width: 50%;
+    margin-right: 5%;
+}
+#tableTarifYoga{
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+   
+}
+
+#tableTarifNaturo
+{
+float : right;
+  width: 40%;
+  margin-right: 5%;
+  margin-bottom: 10px;
+}
+
+th {
+
+   font-size: 26px;
+    }
+
+ td {
+
+    font-size: 18px;
+
+}

@@ -1,9 +1,7 @@
 
 
-    /******************Responsive**********************************************/
-    /**************************************************************************/
-
    /******************************************** header********************************************/ 
+
 
 .site-pusher{
      height: 750px;
@@ -45,16 +43,20 @@
 .navBarPetit {
   position: absolute;
   left: 0;
-  width: 200px;
+  width: 150px;
   height:950px;
   top: 0;
   bottom: 0;
   font-family: book;
   background-color: #0c3559;
   /*****pr cacher le menu****/
-  transform: translateX(-200px); 
+  transform: translateX(-150px); 
   transition-duration: 0.3s;
     }
+
+.with--sidebar .site-pusher{
+  transform: translateX(150px); 
+  }
  
 .connexButton{
   width: 50%;
@@ -108,7 +110,7 @@
 nav li a {
        
   color: #fff ;
-  font-size: 15px;
+  font-size: 12px;
   font-family: book;
   letter-spacing: 2px;
   text-decoration: none;
@@ -122,10 +124,10 @@ nav li a:hover {
 }
 
 .nav-item {
-  padding-top: 20px;
+  padding-top: 7px;
   padding-left: 15px;
   display: block;
-  height: 70px;
+  height: 50px;
   text-align: left;
   line-height: 30px;
   border-bottom: 1px solid #0c4559;
@@ -135,12 +137,46 @@ section#content {
 
 }
    
+/******************************Menu Admin*********************************************************/
+ ul#navAdmin li ul {
+      position: relative;
+      display: none;
+      opacity: 0;
+      background-color:#0c3559
 
+    }
+    ul#navAdmin li:hover ul {
+      display:block;
+      opacity: 1;
+      width: 100%;
+      margin-top: -38px;
+      left: 150px;
+      z-index: 8000;
 
-
-.with--sidebar .site-pusher{
-  transform: translateX(200px); 
+      
+        }
+  ul#navAdmin li:hover ul li {
+  float:none;
+  text-align: left;
+  width: 100%;
+  padding: 7px;
+ 
+     
   }
+  ul#navAdmin li:hover ul li a {
+  font-size: 10px;
+  color: #fff;
+  height: 20px;
+  }
+  ul#navAdmin li:hover ul li a:hover {
+    color: grey;  
+  }
+
+  ul#navAdmin > li > ul {
+    
+       position:absolute;
+    }
+
  
 /**************************************contact************************************************************/
 

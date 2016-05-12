@@ -4,8 +4,9 @@
 		    <footer id="mainFooter">
 		    </footer>
     </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js">/*Google Maps API*/</script> 
-   	<script type="text/javascript" src="contact.js"></script>
+   	<script type="text/javascript" src="js/contact.js"></script>
    	<script type="text/javascript" src="js/js.cookie-2.1.1.min.js"></script>
    	<script type="text/javascript" src="js/main.js"></script>
 

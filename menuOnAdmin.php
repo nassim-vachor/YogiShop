@@ -28,14 +28,30 @@ catch (Exception $e)
                   
         
                         <nav class="navBarPetit">
-                  <ul>
-                     
-                    <li class="nav-item" id="navAdmin"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item" id="navAdmin"><a href="reservationAdmin.php"><strong>Reservation</strong></a></li>
-                    <li class="nav-item" id="navAdmin"><a href="gestionAbonnement.php"><strong>Abonnements</strong></a></li>
-                    <li class="nav-item" id="navAdmin"><a href="adherents.php"><strong>Adhérents</strong></a></li>
-                    <li class="nav-item" id="navAdmin"><a href="souscription.php"><strong>Souscription</strong></a></li>
-                    <li class="nav-item" id="navAdmin"><a href="statistiques.php"><strong>Statistiques</strong></a></li>
+                  <ul id="navAdmin">    
+                    <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
+                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Reservation</strong></a>
+                        <ul>
+                          <li><a href="#">Préparer PLanning</a></li>
+                          <li><a href="#">Gestion Séances</a></li>
+                        </ul>
+                   </li>
+                    <li class="nav-item"><a href="gestionAbonnement.php"><strong>Abonnements</strong></a></li>
+                    <li class="nav-item"><a href="adherents.php"><strong>Adhérents</strong></a>
+                        <ul>
+                          <li><a href="#">Nouvel Adhérent</a></li>
+                          <li><a href="#">Fiche Adhérent</a></li>
+                          <li><a href="#">Impression Etiquettes</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item"><a href="souscription.php"><strong>Souscription</strong></a></li>
+                    <li class="nav-item"><a href="statistiques.php"><strong>Statistiques</strong></a>
+                          <ul>
+                          <li><a href="#">Entreprise</a></li>
+                          <li><a href="#">Suivi Adhérent</a></li>
+                        </ul>
+                    </li>
                     
                    </ul>
 
@@ -44,7 +60,7 @@ catch (Exception $e)
                  
 
         	</header>
-        <script type="text/javascript" src="petit.js"></script>
-        <script type="text/javascript" src="connex.js"></script>
+        <script type="text/javascript" src="js/petit.js"></script>
+        <script type="text/javascript" src="js/connex.js"></script>
         <div id="mainContainer">
             <section id="content"> 
