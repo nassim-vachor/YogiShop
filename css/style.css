@@ -192,7 +192,72 @@ footer#mainFooter {
 
 }
 
+/******************************************** Inscription ********************************************/
+.formInscrip{
 
+    font-size: 14px;
+    font-family: book;
+
+
+}
+#contenuInLab{
+margin-right: 4%;
+margin-left: auto;
+
+}
+
+.formInscrip label{
+
+text-align: right;
+color:#046380;
+margin-right: 5px;
+
+}
+.formInscrip input{
+height : 30px;
+}
+
+.formInscrip button{
+    background: #49c0eb;
+  background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -ms-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -o-linear-gradient(top, #49c0eb, #020d45);
+  background-image: linear-gradient(to bottom, #49c0eb, #020d45);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+}
+
+#genre input{
+    width: 10%;
+    margin : auto;
+    height: 15px;
+}
+
+#messageDouleur label{
+
+vertical-align: top;
+}
+
+#messageDouleur textarea{
+
+width: 50%;
+}
+
+#obliga {
+   color : red;
+}
+
+#erreurInscription{
+    margin-top: 10%;
+    text-align: center;
+}
 /******************************************** login ********************************************/
 /* ne sert a rien pour l'instant*//*
 .btn-sign {
