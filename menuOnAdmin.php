@@ -46,7 +46,7 @@ catch (Exception $e)
 
                     </li>
                     <li class="nav-item"><a href="souscription.php"><strong>Souscription</strong></a></li>
-                    <li class="nav-item"><a href="statistiques.php"><strong>Statistiques</strong></a>
+                    <li class="nav-item"><a href="dates.php"><strong>Statistiques</strong></a>
                           <ul>
                           <li><a href="#">Entreprise</a></li>
                           <li><a href="#">Suivi Adhérent</a></li>
