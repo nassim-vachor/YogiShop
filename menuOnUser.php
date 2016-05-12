@@ -33,7 +33,7 @@
                   <ul>
                      
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="inscriptionAdherent.php"><strong>Reservation</strong></strong></strong></a></li>
+                    <li class="nav-item"><a href=""><strong>Reservation</strong></strong></strong></a></li>
                     <li class="nav-item"><a href="yogaInfo.php"><strong>YogiShop</strong></strong></a></li>
                     <li class="nav-item"><a href="contact.php"><strong>Nous contacter</strong></a></li>
                     

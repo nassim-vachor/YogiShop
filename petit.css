@@ -1,0 +1,345 @@
+
+
+   /******************************************** header********************************************/ 
+
+
+.site-pusher{
+     height: 750px;
+     transition-duration: 0.3s; 
+}
+
+ header#menuTop {
+    z-index: 100;
+}
+
+ .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 91px;
+    cursor: pointer;
+}
+
+.header__icon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 3rem;
+  height: 0;
+  top: 30px;
+  left: 15px;
+  box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black;
+}
+
+.btOn{
+    
+  margin-top: 35px;
+  margin-right: 15px;
+}
+
+
+
+.navBarPetit {
+  position: absolute;
+  left: 0;
+  width: 150px;
+  height:950px;
+  top: 0;
+  bottom: 0;
+  font-family: book;
+  background-color: #0c3559;
+  /*****pr cacher le menu****/
+  transform: translateX(-150px); 
+  transition-duration: 0.3s;
+    }
+
+.with--sidebar .site-pusher{
+  transform: translateX(150px); 
+  }
+ 
+.connexButton{
+  width: 50%;
+  float: right;
+}
+
+
+ .btn {
+  background: #49c0eb;
+  background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -ms-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -o-linear-gradient(top, #49c0eb, #020d45);
+  background-image: linear-gradient(to bottom, #49c0eb, #020d45);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  margin-right: 3%;
+  margin-top: 35px;
+  font-size: 14px;
+  padding: 3px 18px 3px 18px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+}
+   #userProfil{
+    margin-top: 5px;
+    margin-left: 18px;
+    font-size: 14px;
+    position: absolute;
+
+
+}
+
+#userProfil img{
+
+    width : 24px; 
+   height :24px; 
+  
+} 
+
+
+.logo {
+  width: 140px;
+  margin-left: -70px;
+  margin-top:70px;
+  height: 80px;
+}
+
+nav li a {
+       
+  color: #fff ;
+  font-size: 12px;
+  font-family: book;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+
+  color:#c74438;
+  transition:400ms;
+  text-decoration: none;
+}
+
+.nav-item {
+  padding-top: 7px;
+  padding-left: 15px;
+  display: block;
+  height: 50px;
+  text-align: left;
+  line-height: 30px;
+  border-bottom: 1px solid #0c4559;
+}
+section#content {
+  position: relative;
+
+}
+   
+/******************************Menu Admin*********************************************************/
+ ul#navAdmin li ul {
+      position: relative;
+      display: none;
+      opacity: 0;
+      background-color:#0c3559
+
+    }
+    ul#navAdmin li:hover ul {
+      display:block;
+      opacity: 1;
+      width: 100%;
+      margin-top: -38px;
+      left: 150px;
+      z-index: 8000;
+
+      
+        }
+  ul#navAdmin li:hover ul li {
+  float:none;
+  text-align: left;
+  width: 100%;
+  padding: 7px;
+ 
+     
+  }
+  ul#navAdmin li:hover ul li a {
+  font-size: 10px;
+  color: #fff;
+  height: 20px;
+  }
+  ul#navAdmin li:hover ul li a:hover {
+    color: grey;  
+  }
+
+  ul#navAdmin > li > ul {
+    
+       position:absolute;
+    }
+
+ 
+/**************************************contact************************************************************/
+
+
+  #contactSection{
+
+        margin-top: 3%;
+        font-family: book;
+        width: 100% !important;
+        font-size: 16px;
+      margin-right: auto;
+        margin-left: auto;
+        background-color: white !important;
+        border-style: none;
+ 
+    }
+       #planAccessSection
+    { 
+        margin-top: 1%;
+        width: 90% !important;
+        margin-right: 5%;
+        margin-left: 5%;
+      text-align: center;
+
+
+    }
+#contactSection h1{
+    font-size: 22px;
+}
+#contactSection h2{
+    font-size: 18px;
+}
+#contactSection h3{
+    font-size: 15px;
+}
+#planAccessSection h3{
+  font-size: 22px;
+}
+#planAccessSection h4{
+  font-size: 14px;
+}
+ /* gerer la taille de la MAP*/
+ #googleMap{
+    height: 250px;
+    width: 100%;
+
+ }
+
+ /**********************************YogaInfos*****************************************/
+ #yoga,#naturopathie{
+        width: 80%;
+      
+    } 
+
+    #tableTarifYoga{
+float: none;
+    width: 90%;
+    margin-left: 5%;
+   margin-right: 5%;
+}
+#tableTarifNaturo
+{
+    float : none;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+
+
+}
+ /**********************************login*****************************************/
+/*************************************************************************************************/
+
+.post { margin: 0 auto; padding-bottom: 50px; float: left; width: 960px; }
+
+
+/* Fenetre login */
+.login-popup {
+ 
+    width: 250px;
+    height: 280px;
+ 
+}
+
+
+form.signin .textbox input {
+    width: 180px;
+    height: 30px;
+}
+
+
+.button {
+    width: 180px;
+    height: 30px;
+}
+
+ /****************************************************************************************/
+  /********************************************yogaInfo *******************************************/
+
+#yoga div h1, #naturopathie div
+h1{
+
+    font-size: 18px;
+
+}
+.textYoga p ,.textNaturo p {
+    font-size: 14px;
+}
+
+    #yoga{
+
+    
+        margin: auto;
+      
+    } 
+
+    #naturopathie{
+
+        margin: auto;
+    } 
+
+
+  .yogaImage{
+
+  width: 100%;
+
+  margin-top: 15%
+
+}
+.textYoga{
+    width: 100%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+.naturoImage{
+    width: 100%;
+
+     margin-top: 20px;
+}
+.textNaturo{
+    width: 100%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+  
+#tableTarifYoga{
+    width: 100%;
+    margin-bottom: 10px;
+   
+}
+
+#tableTarifNaturo
+{
+  width: 90%;
+  margin-bottom: 10px;
+}
+th {
+   
+   font-size: 18px;
+
+}
+ td {
+ 
+    font-size: 13px;
+
+}

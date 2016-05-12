@@ -2,14 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css-Bootstrap/bootstrap.css">
+         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
  
           <!-- utilisation de style.css pour les differents types d ecrans (responsives) -->
-        <link rel="stylesheet" media="screen and (min-width:1024px)"  href="grand.css" >
-        <link rel="stylesheet" media="screen and (min-width:750px) and (max-width:1024px)  "  href="moyen.css"  >
-        <link rel="stylesheet" media="screen and  (max-width:750px) "  href="petit.css"  >
+        <link rel="stylesheet" media="screen and (min-width:1024px)"  href="css/grand.css" >
+        <link rel="stylesheet" media="screen and (min-width:750px) and (max-width:1024px)  "  href="css/moyen.css"  >
+        <link rel="stylesheet" media="screen and  (max-width:750px) "  href="css/petit.css"  >
 
        
         <title>Inscription</title>
@@ -30,7 +30,7 @@
   <p>Les champs obligatoires sont suivis d'un <strong id="obliga">*</strong>.</p>
                 <div id ="contenuInLab">
                          <div id="genre">
-                       <label for="Genre">Genre:</label>
+                       <label for="Genre">Sexe:</label>
                             
                             <input type="radio" name="sexe" value="femme">Femme
                             <input type="radio" name="sexe" value="homme">Homme<br>
@@ -68,8 +68,8 @@
                           <input type="text" id="rue" name="rue"><br> 
                    
                    <div id="messageDouleur">
-                     <label for="douleurs"> Renseignements complémentaires : </label>
-                       <textarea rows="4" cols="50" name="douleurs" ></textarea>
+                     <label for="douleurs"> Autres : </label>
+                       <textarea rows="4" cols="50" name="douleurs" placeholder="Antécédents médicaux / Douleurs... "></textarea>
 
                     </div>
                         <br>
