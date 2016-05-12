@@ -11,7 +11,6 @@
         <link rel="stylesheet" media="screen and (min-width:750px) and (max-width:1024px)  "  href="css/moyen.css"  >
         <link rel="stylesheet" media="screen and  (max-width:750px) "  href="css/petit.css"  >
 
-       
         <title>Inscription</title>
     </head>
     <body>
@@ -43,7 +42,7 @@
             }
 
         $email=$_POST['email'];
-        $password=$_POST['password'];
+        $password= sha1($_POST['password']);
         $telephone=$_POST['telephone'];
         $ville=$_POST['ville'];
         $cp=$_POST['codePostal'];
@@ -58,10 +57,21 @@
 
         if ($row >0)
             {
+
+
 ?>
-                <h1 id ="erreurInscription">     
-                <a href="inscriptionAdherent.php" onclick="alert('Erreur cet email existe deja!');">Revenir au formulaire d'inscription</a>
-                </h1>
+
+
+
+<script type="text/javascript">
+    
+ 
+    alert("Cet e-mail existe déja!! veuillez choisir un autre")
+    window.location = "inscriptionAdherent.php";
+    
+
+</script>
+               
 <?php
             }
 

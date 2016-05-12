@@ -40,7 +40,7 @@ catch (Exception $e)
                     <li class="nav-item"><a href="adherents.php"><strong>Adhérents</strong></a>
                         <ul>
                           <li><a href="inscriptionAdherent.php">Nouvel Adhérent</a></li>
-                          <li><a href="#">Fiche Adhérent</a></li>
+                          <li><a href="ficheAdherent.php">Fiche Adhérent</a></li>
                           <li><a href="#">Impression Etiquettes</a></li>
                         </ul>
 
