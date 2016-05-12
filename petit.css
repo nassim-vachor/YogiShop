@@ -208,9 +208,100 @@ float: none;
   margin-left: 5%;
   margin-right: 5%;
 
+}
+
+
+
+/******************************************** Inscription ********************************************/
+
+.formInscrip{
+    margin-top: 10%;
+    width :95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: red;
 
 
 }
+.formInscrip p ,.formInscrip h1{
+
+text-align: center;
+
+   
+}
+
+.formInscrip p{
+
+font-size: 14px;
+ }
+.formInscrip h1{
+
+font-size: 20px;
+font-weight: bold;
+}
+
+
+.formInscrip label{
+width: 25%;
+
+}
+.formInscrip input{
+
+width: 70%;
+
+}
+
+.formInscrip button{
+width: 100px;
+margin-left: -50px;
+position: absolute;
+left: 50%;
+
+  padding: 5px 20px 5px 20px;
+
+}
+
+#genre input{
+    width: 10%;
+    margin : auto;
+}
+
+
+
+#messageDouleur textarea{
+
+width: 70%;
+}
+
+
+ /******************************login*****************************/
+/* fenetre login  */
+.login-popup {
+    width: 350px;
+    height: 350px;
+}
+
+form.signin .textbox input { 
+    width: 250px;
+    height: 40px;
+}
+
+
+form.signin input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.signin input::-webkit-input-placeholder {
+    color: #424242;
+  
+}
+
+.button {
+    width: 250px;
+    height: 40px;
+}
+
  /**********************************login*****************************************/
 /*************************************************************************************************/
 

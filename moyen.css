@@ -161,6 +161,52 @@ section#content {
 
 
 
+/******************************************** Inscription ********************************************/
+
+.formInscrip{
+    margin-top: 5%;
+    width :80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+.formInscrip p ,.formInscrip h1{
+
+
+ text-align: center;
+}
+.formInscrip label{
+width: 22%;
+
+}
+.formInscrip input{
+
+width: 72%;
+
+}
+
+.formInscrip button{
+width: 120px;
+margin-left: -60px;
+position: absolute;
+left: 50%;
+  padding: 5px 25px 5px 25px;
+
+}
+
+#genre input{
+    width: 20%;
+    margin : auto;
+}
+
+
+
+#messageDouleur textarea{
+
+width: 72%;
+}
+
+
  /******************************login*****************************/
 /* fenetre login  */
 .login-popup {

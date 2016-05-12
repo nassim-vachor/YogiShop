@@ -25,7 +25,7 @@ CREATE TABLE Person(
         DateExpiration Datetime ,
         NbSeances      Int ,
         EstAdmin       Bool ,
-        Sexe           Varchar (25) ,
+        Sexe           Text ,
         PRIMARY KEY (IdPerson )
 )ENGINE=InnoDB;
 
