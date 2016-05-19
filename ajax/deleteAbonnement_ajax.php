@@ -1,6 +1,6 @@
   
 <?php
-      require_once("services/deleteAbonn.php");
+      require_once("../services/deleteAbonn.php");
 
                     
                    $id=$_POST['id'];

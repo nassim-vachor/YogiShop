@@ -63,7 +63,7 @@ function deleteAbo(idAbonnement) {
 
 	//Etape 2: faire la requete ajax
 	$.ajax({
-	  url: "deleteAbonnement_ajax.php",
+	  url: "ajax/deleteAbonnement_ajax.php",
 	  method: "POST",
 	   data: {
 	    id: idAbonnement
