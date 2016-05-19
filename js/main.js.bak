@@ -24,13 +24,11 @@ else{
 	    password: password
 	  },
 	  success: function(result) {
-	  	console.log(result);
 	  	var res = JSON.parse(result);
 
-	  //	alert(res.a.b); //c
+	  //	alert(res.a.b); //
 	    //Creation du cookie
 	    // resultat requete nul
-	  //  console.log(res);
 	    if(!res.token) {
 	    	$("#login_error").text("Mauvais email / mot de passe");
 
@@ -50,6 +48,8 @@ else{
 	});
 }
 }
+
+
 function deleteAbo(idAbonnement) {
 			
 	//var type =  $("#typ").val(); 
@@ -95,7 +95,6 @@ else{
 
 
 }
-
 
 function ajoutSeance(){
 	//Etape 1: recuperer des champs

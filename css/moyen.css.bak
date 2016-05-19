@@ -290,17 +290,15 @@ form.signin .textbox input {
 }
 
 
-form.formSeance input:-moz-placeholder {
+form.signin input:-moz-placeholder {
     color: #bbb;
     text-shadow: 0 0 2px #000;
 }
 
-form.formSeance input::-webkit-input-placeholder {
+form.signin input::-webkit-input-placeholder {
     color: #424242;
   
 }
-
-
 
 .button {
     width: 250px;
@@ -438,11 +436,6 @@ th {
     margin-left: 35%;
     font-size: 26px;
     color: #2c4271;
-
-}
-
-
-
  /******************************AjoutSeance*****************************/
 
  .ajoutSeance-popup {
@@ -455,12 +448,13 @@ form.formSeance.textboxSeance input {
 }
 
 
-form.signin input:-moz-placeholder {
+
+form.formSeance input:-moz-placeholder {
     color: #bbb;
     text-shadow: 0 0 2px #000;
 }
 
-form.signin input::-webkit-input-placeholder {
+form.formSeance input::-webkit-input-placeholder {
     color: #424242;
   
 }
@@ -500,4 +494,9 @@ form.formSeance2.textboxSeance2 input {
     width: 180px;
     height: 40px;
     margin-left: 40px;
+}
+
+
+
+
 }

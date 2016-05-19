@@ -494,7 +494,6 @@ th {
     color: #2c4271;
 
 }
-
  /******************************AjoutSeance*****************************/
 
  .ajoutSeance-popup {
@@ -600,3 +599,4 @@ form.signin .textbox input {
     width: 180px;
     height: 30px;
 }*/
+

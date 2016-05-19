@@ -1,6 +1,6 @@
 <?php 
 
-require_once("services/login.php");
+require_once("../services/login.php");
 
 //Etape 1: on recupere les logins
 $username = $_POST["username"]; 

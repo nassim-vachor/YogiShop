@@ -1,26 +1,36 @@
+
 /******************************************** header********************************************/
 header#menuTop {
     z-index: 10000000;
+    }
+
+.btOn {
+
+   margin-top: 25px;
+    margin-right: 3.5%;
+    }
+
+.connexButton
+{
+    width: 80%;
 }
 
- .btOn {
+ .logo {
+    width: 270px;
+    margin-left: -135px;
     margin-top: 20px;
-    margin-right: 0.1%;
-}
+    height: 170px;
+ }
 
-.connexButton{
-
-    width: 70%;
-}
-/************************menu admin**********************************************************************/
- nav ul#navAdmin li{
+/***********************menu admin**********************************************************************/
+     nav ul#navAdmin li{
         width: 10%;
         list-style-type: none;
 
 
     }
     nav ul#navAdmin li a{
-        font-size: 15px;
+        font-size: 16px;
         display:block;
 
     }
@@ -46,14 +56,16 @@ header#menuTop {
  
      
   }
+   ul#navAdmin li:hover ul li a:hover {
+    color: grey;  
+  }
+
   ul#navAdmin li:hover ul li a {
-  font-size: 12px;
+  font-size: 13px;
   color: #fff;
   height: 20px;
   }
-  ul#navAdmin li:hover ul li a:hover {
-    color: grey;  
-  }
+ 
 
   ul#navAdmin > li > ul {
     
@@ -61,58 +73,23 @@ header#menuTop {
     }
  
        ul#navAdmin > li:nth-child(2){
-          margin-right: 3%;
-          margin-left: 3%;
+          margin-right: 5%;
+          margin-left: 5%;
 
     }
       ul#navAdmin > li:nth-child(3){
-      margin-right: 14%;
+      margin-right: 10%;
       margin-left: 0px;
 
     }
      
      ul#navAdmin > li:nth-child(4){
-      margin-left:14%;
-      margin-right: 3%;
+      margin-left:10%;
+      margin-right: 5%;
 
     }
      ul#navAdmin > li:nth-child(5){
-      margin-right: 3%;
-
-    }
-    /*
-    #btnAdmin {
-
-   margin-top: 25px;
-    margin-right: 1%;
-    }
-     nav #navAdmin{
-        width: 10%;
-        list-style-type: none;
-
-    }
-    nav #navAdmin a{
-        font-size: 15px;
-
-    }
-       #navAdmin:nth-child(2){
-          margin-right: 3%;
-          margin-left: 3%;
-
-    }
-      #navAdmin:nth-child(3){
-      margin-right: 14%;
-      margin-left: 0px;
-
-    }
-     
-     #navAdmin:nth-child(4){
-      margin-left:14%;
-      margin-right: 3%;
-
-    }
-     #navAdmin:nth-child(5){
-      margin-right: 3%;
+      margin-right: 5%;
 
     }
     #btnAdmin {
@@ -120,19 +97,22 @@ header#menuTop {
    margin-top: 25px;
     margin-right: 1%;
     }
-*/
-/***********************************************************************************************************/
-
+/************************************MenuOFFgrand*****************************************************************/
 nav {
         position: absolute;
         top: 70px;
         width: 100%;
     }
 
+   /* nav ul {
+        bottom: 10px;
+    }*/
+
      nav li{
     float: left;
     list-style-type: none;
     width: 20%;
+
     
     }
    
@@ -144,7 +124,7 @@ nav {
         font-family: book;
         letter-spacing: 2px;
         text-decoration: none;
-        height: 40px;
+         height: 40px;
 
     }
     nav li a:hover {
@@ -162,14 +142,10 @@ nav {
     margin-left:10%;
     }
 
-.logo {
-    width: 200px;
-    margin-left: -100px;
-    margin-top: 35px;
-    height: 140px;
-}
+   
 
-.btn {
+    /*button deconnexion*/
+ .btn {
   background: #49c0eb;
   background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
   background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
@@ -181,91 +157,65 @@ nav {
   border-radius: 7px;
   font-family: Arial;
   color: #ffffff;
-  margin-right: 3%;
-  margin-top: 20px;
+  margin-right: 5%;
+  margin-top: 25px;
   font-size: 14px;
-  padding: 4px 18px 4px 18px;
+  padding: 5px 25px 5px 25px;
   border: solid #1f628d 0px;
   text-decoration: none;
 }
 
 #userProfil{
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 1%;
-    font-size: 16px;
+    font-size: 20px;
+
+
+
 }
-
 #userProfil img{
-
     width : 32px; 
    height :32px; 
   
 }
- /****************************************************************************************/
-article {
-    height: 750px;
-}
-
-section#content {
-    position: relative;
-    
-}
-/**************************************Contact************************************************************/
-#contactSection h1{
-    font-size: 30px;
-}
-#contactSection h2{
-    font-size: 26px;
-}
-#contactSection h3{
-    font-size: 22px;
-}
- /* gerer la taille de la MAP*/
- #googleMap{
-    height: 340px;
-    width: 100%;
-
- }
-
-
-
 
 
 /******************************************** Inscription ********************************************/
 
 .formInscrip{
     margin-top: 5%;
-    width :80%;
-    margin-left: 10%;
-    margin-right: 10%;
-
+    width :60%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 .formInscrip p ,.formInscrip h1{
+text-align: center;
 
-
- text-align: center;
 }
 .formInscrip label{
-width: 22%;
+width: 20%;
+
 
 }
 .formInscrip input{
 
-width: 72%;
+width: 75%;
 
 }
 
 .formInscrip button{
-width: 120px;
-margin-left: -60px;
+width: 150px;
+
+margin-left: -75px;
 position: absolute;
 left: 50%;
+
   padding: 5px 25px 5px 25px;
 
 }
 
 #genre input{
-    width: 20%;
+    width: 10%;
     margin : auto;
 }
 
@@ -273,61 +223,59 @@ left: 50%;
 
 #messageDouleur textarea{
 
-width: 72%;
+width: 75%;
 }
 
+/******************************************** login ********************************************/
 
- /******************************login*****************************/
 /* fenetre login  */
 .login-popup {
     width: 350px;
     height: 350px;
 }
 
-form.signin .textbox input { 
+form.signin .textbox input {
+
     width: 250px;
     height: 40px;
 }
 
-
-form.formSeance input:-moz-placeholder {
-    color: #bbb;
-    text-shadow: 0 0 2px #000;
-}
-
-form.formSeance input::-webkit-input-placeholder {
-    color: #424242;
-  
-}
-
-
-
-.button {
+.button {  
     width: 250px;
     height: 40px;
 }
 
- /****************************************************************************************/
-/********************************************yogaInfo *******************************************/
+ /**************************************MAP************************************************************/
+ /* gerer la taille de la MAP*/
+ #googleMap{
+    height: 380px;
+    width: 80%;
+
+ }
+ /********************************************yogaInfo *******************************************/
 
 #yoga div h1, #naturopathie div
 h1{
-    font-size: 26px;
+
+    font-size: 30px;
+
 }
 .textYoga p ,.textNaturo p {
-    font-size: 18px;
+    font-size: 22px;
 }
 
     #yoga{
-        height: 250px;
          margin-top: 7%;
-    
+   
+        height: 350px;
+      
     } 
 
     #naturopathie{
 
-        height: 200px;
-        } 
+        height: 300px;
+    } 
+
 
 .yogaImage{
 
@@ -366,29 +314,29 @@ float : right;
   margin-right: 5%;
   margin-bottom: 10px;
 }
-
 th {
-
-   font-size: 26px;
-    }
-
- td {
-
-    font-size: 18px;
+   
+   font-size: 30px;
 
 }
+ td {
+ 
+    font-size: 22px;
+
+}
+
 /****************bar de recherche**********************************************************/
 #barRecherche{
-    width: 370px;
+    width: 420px;
     font-family: book;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 7%;
-    margin-left: 35%
+    margin-left: 35%;
 }
 #nom{
-    width: 260px;
-    height: 30px;
+    width: 290px;
+    height: 35px;
 }
 .adherent_preview {
     padding: 10px;
@@ -399,20 +347,17 @@ th {
     background-color: rgb(240, 240, 240);
 }
 #selectionner{
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 35px;
 }
 #output{
-    width:260px;
+    width:290px;
     margin-left: 35%;
-    font-size: 16px;
+    font-size: 18px;
 }
 /**********************************fiche adherent*************************************************************************/
  
-.fiche{
-    width: 100%;
-    margin: auto;
-}
+
  #ficheAdherent{
     margin-left: 5%;
     width: 30%;
@@ -422,11 +367,11 @@ th {
 .fiche label {
     margin-bottom: 5px;
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
 }
 .titre{
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
 }
 #abonnement{
     float: right;
@@ -435,48 +380,47 @@ th {
     margin-top: 2%
 }
 #modifSaved{
-    margin-left: 35%;
+    margin-left: 28%;
     font-size: 26px;
     color: #2c4271;
 
 }
+/***************************************************************AjoutSeance*******************************************************************************************/
 
 
-
- /******************************AjoutSeance*****************************/
-
- .ajoutSeance-popup {
+ 
+    .ajoutSeance-popup {
     width: 500px;
     height: 460px;
 }
-form.formSeance.textboxSeance input { 
+
+form.formSeance.textboxSeance label {
+
+    width: 50px;
+  
+
+}
+form.formSeance.textboxSeance input, form.formSeance.textboxSeance select{
+
     width: 250px;
     height: 40px;
+
 }
 
-
-form.signin input:-moz-placeholder {
-    color: #bbb;
-    text-shadow: 0 0 2px #000;
-}
-
-form.signin input::-webkit-input-placeholder {
-    color: #424242;
-  
-}
-
-
-  .buttonSubmit{  
+.buttonSubmit{  
     width: 150px;
     height: 40px;
-    margin-left: 175px;
+    margin-left: 170px;
     margin-top: 30px;
 }
 
 
- /******************************AnnulSeance*****************************/
 
-  .annulSeance-popup {
+
+/***************************************************************AnnulSeance*******************************************************************************************/
+
+ 
+    .annulSeance-popup {
     width: 400px;
     height: 350px;
 }
@@ -500,4 +444,41 @@ form.formSeance2.textboxSeance2 input {
     width: 180px;
     height: 40px;
     margin-left: 40px;
+}
+
+
+
+
+/***************************************************************modifSeance*******************************************************************************************/
+
+ 
+    .modifSeance-popup {
+    width: 450px;
+    height: 480px;
+}
+
+form.formSeance3.textboxSeance3 label {
+
+    width: 50px;
+  
+
+}
+
+
+form.formSeance3 .textboxSeance3 input {
+
+    width: 180px;
+    float: right;
+
+}
+
+.buttonSubmit3{  
+    width: 140px;
+    height: 40px;
+    margin-left: 140px;
+}
+
+.textboxSeance3 select{
+    width: 180px;
+    float: right;
 }

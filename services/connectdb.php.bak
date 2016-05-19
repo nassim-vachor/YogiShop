@@ -1,0 +1,32 @@
+<?php
+
+/*
+try {
+    $dbh = new PDO('mysql:host=localhost;dbname=yogishop', 'root', '');
+} catch (PDOException $e) {
+    echo 'Connexion échouée : ' . $e->getMessage();
+}
+*/
+
+function connect() {
+	try {
+<<<<<<< HEAD:services/connectdb.php
+		
+		$dbh = new PDO('mysql:host=localhost;dbname=yogishop', 'root', '');
+    	 $dbh -> exec("set names utf8");
+
+    	 return $dbh;
+    	
+
+=======
+    	$dbh = new PDO('mysql:host=localhost;dbname=yogishop', 'root', '');
+    	 $dbh -> exec("set names utf8");
+
+    	 return $dbh;
+>>>>>>> 12d609e797123061129792a9d99890c7f919c0b7:services/connectdb.php
+	} catch (PDOException $e) {
+    	echo 'Connexion échouée : ' . $e->getMessage();
+	}
+}
+
+?>

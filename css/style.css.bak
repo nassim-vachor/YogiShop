@@ -325,7 +325,6 @@ fieldset {
     margin-top: 2%;
     margin-left: 10%;
     margin-right: 10%;
-
 }
 .formSeance3 fieldset
 {
@@ -570,8 +569,6 @@ label {
     text-align: center;
     font-weight: bold
 }
-
-
 
         /******************************************************Ajouter seance ****************************************************************/
 
@@ -963,4 +960,3 @@ form.formSeance3 input::-webkit-input-placeholder {
 .textboxSeance3 label{
     margin-bottom: 5px;
 }
-

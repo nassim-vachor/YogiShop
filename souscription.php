@@ -66,8 +66,7 @@ function searchq(){
 </div>
 
 <?php
-    require_once("connectdb.php");
-    $dbh = connect();
+
 
 
 if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selectionner']))
