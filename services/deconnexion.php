@@ -15,7 +15,7 @@
   setcookie('token', "", time()-3600, "/");
   unset($_COOKIE['token']);
 
-header('location:index.php');
+header('location:../index.php');
 
   
 

@@ -11,7 +11,7 @@
                   <ul>
                      
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="reservation.php"><strong>Reservation</strong></a></li>
+                    <li class="nav-item"><a href="reservation.php"><strong>Réservation</strong></a></li>
                     <li class="nav-item"><a href="yogaInfo.php"><strong>YogiShop</strong></a></li>
                     <li class="nav-item"><a href="contact.php"><strong>Nous contacter</strong></a></li>
                     
@@ -34,7 +34,6 @@
                             </label>
                             
                             <button class="submit button" name="connecter" type="submit" onClick="login(); return false;">Connexion</button>
-                            <span id="login_error2" style="color: red;"></span>
                             </fieldset>
                       </form>
               

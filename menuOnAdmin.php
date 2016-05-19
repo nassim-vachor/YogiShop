@@ -1,42 +1,30 @@
-<?php
 
-try
-
-{
-
-    //$bdd = new PDO('mysql:host=127.12.109.130;dbname=php;charset=utf8', 'adminC3gxq8w', 'zt2Bn5kcHRit');
-
-
-}
-
-catch (Exception $e)
-
-{
-
-        die('Erreur : ' . $e->getMessage());
-
-}
-
-?>
 
 
         	<header id="menuTop">
              <!-- id pour la partie javascript -->
         	<a href="#" class="header__icon" id="header__icon"></a>
-           <a href="deconnexion.php"><p class="btn" id="btnAdmin">Déconnexion</p></a>
+           <?php 
+            $id= $_COOKIE["id"];
+            $reponse = $dbh->query("SELECT Nom from person where idPerson= '$id'");
+            $row= $reponse->fetch();
+             $Nom=$row['Nom'];
+            ?>
+            <p id="userProfil"><img src="images/userProfil.png"  alt="Bienvenue"><?php echo $Nom ?></p>
+           <a href="services/deconnexion.php"><p class="btn" id="btnAdmin">Déconnexion</p></a>
 				 <div class="logo"> </div>
                   
         
                         <nav class="navBarPetit">
                   <ul id="navAdmin">    
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Reservation</strong></a>
+                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Réservation</strong></a>
                         <ul>
                           <li><a href="#">Préparer PLanning</a></li>
                           <li><a href="#">Gestion Séances</a></li>
                         </ul>
                    </li>
-                    <li class="nav-item"><a href="gestionAbonnement.php"><strong>Abonnements</strong></a></li>
+                    <li class="nav-item"><a href="abonnement.php"><strong>Abonnements</strong></a></li>
                     <li class="nav-item"><a href="adherents.php"><strong>Adhérents</strong></a>
                         <ul>
                           <li><a href="inscriptionAdherent.php">Nouvel Adhérent</a></li>

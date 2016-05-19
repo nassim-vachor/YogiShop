@@ -184,7 +184,7 @@ th {
 footer#mainFooter {
     height: 200px;
     width: 100%;
-    background: red;
+    background: #fff;
 
 }
 
@@ -394,4 +394,172 @@ label {
 }
 .user {
     width: 40%;
+}
+/****************bar de recherche**********************************************************/
+#barRecherche{
+    width: 420px;
+    font-family: book;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 7%;
+    margin-left: 35%
+}
+#nom{
+    width: 290px;
+    height: 35px;
+}
+.adherent_preview {
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+}
+.adherent_preview:hover {
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+}
+#selectionner{
+    width: 120px;
+    height: 35px;
+}
+#output{
+    width:290px;
+    margin-left: 35%;
+    font-size: 18px;
+}
+/**********************************fiche adherent*************************************************************************/
+ 
+.fiche{
+    width: 100%;
+    margin: auto;
+}
+ #ficheAdherent{
+    margin-left: 5%;
+    width: 30%;
+    margin-top: 2%;
+    float: left;
+}
+.fiche label {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.titre{
+    text-align: center;
+    font-size: 30px;
+}
+#abonnement{
+    float: right;
+    margin-right: 5%;
+    width:50%;
+    margin-top: 2%
+}
+#modifSaved{
+    margin-left: 35%;
+    font-size: 26px;
+    color: #2c4271;
+
+}
+
+#btModif{
+    margin-top: 0px;
+}
+.enteteCentre{
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+
+}
+.abonnement{
+    margin-top: 10%;
+    width: 100%;
+    margin-left:0px;
+}
+#tableAbbo{
+    width: 50%;
+    margin-left:3%;
+    float: left;
+
+}
+#tableAbbo input {
+    font-size: 18px;
+
+}
+#tableAbbo th {
+    font-size: 24px;
+}
+#creationAbo{
+    width: 35%;
+    float: right;
+    margin-top: 6px;
+    margin-right: 3%;
+}
+#creationTitre{
+    font-size: 36px;
+    font-weight: bold;
+}
+#creationAbo label {
+    margin-top: 10px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+#creationAbo button {
+    margin-left: 30%;
+    width: 40%;
+}
+#creationAbo #tarif1 {
+    width: 30%;
+
+}
+#creationAbo #nbS {
+    width: 30%;
+
+}
+#creationAbo #duree {
+    width: 30%;
+
+}
+
+#creationAbo input {
+    font-size: 18px;
+
+}
+
+#creationAbo select {
+    width: 30%;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+#btSupp{
+    background: #F02D3A;
+    margin-top: 0px;
+}
+#abo_supp{
+    color: red;
+     font-size:30px;
+
+}
+/***********************************Souscription*****************************************/
+#abonnement1{
+    width: 55%;
+    float: right;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+.th{
+    font-size: 17px;
+}
+#trH:nth-child(even){
+  background-color: #f2f2f2;
+}
+#trH td {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.enteteHistorique{
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold
 }

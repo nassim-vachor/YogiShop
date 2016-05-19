@@ -1,12 +1,4 @@
 
-<?php
-
-
-       require_once("connectdb.php");
-       $dbh = connect();
-
-
-?>
 
 
         	<header id="menuTop">
@@ -23,7 +15,7 @@
              $Nom=$row['Nom'];
             ?>
             <p id="userProfil"><img src="images/userProfil.png"  alt="Bienvenue"><?php echo $Nom ?></p>
-            <a href="deconnexion.php"><p class="btn">Déconnexion</p></a>
+            <a href="services/deconnexion.php"><p class="btn">Déconnexion</p></a>
 
 
 				 <div class="logo"> </div>
@@ -33,7 +25,7 @@
                   <ul>
                      
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href=""><strong>Reservation</strong></strong></strong></a></li>
+                    <li class="nav-item"><a href=""><strong>Réservation</strong></strong></strong></a></li>
                     <li class="nav-item"><a href="yogaInfo.php"><strong>YogiShop</strong></strong></a></li>
                     <li class="nav-item"><a href="contact.php"><strong>Nous contacter</strong></a></li>
                     

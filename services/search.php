@@ -2,7 +2,7 @@
 
 include("connectdb.php");
  $dbh = connect();
-$output = '';
+$output = array();
 // recuperation de la donnée contenu dans le champs recherché
  if(isset($_POST['searchVal'])){
 
@@ -13,31 +13,40 @@ $output = '';
  	$row=$requete->rowCount();
  	if($row == 0)
  	{
- 		$output = "Erreur, aucun adhérent n'a ce nom !";
+
+ 		$output[]=array(
+ 				"idP"  => "-1",
+ 				"Nom" => "aucun adhérent n'a ce nom!!",
+ 				"Prenom" => "Erreur,"
+ 				);
+
+ 		//$output = ["Erreur, aucun adhérent n'a ce nom !"];
  		
  	}
  	else{
  		// on parcours les adherents trouves dans la bd qui matchent 
  		while($row2 =$requete->fetch())
- 		{
+ 		{   
 
  			$prenom= $row2["Prenom"];
  			
  			$nom= $row2["Nom"];
  			$id = $row2["IdPerson"];
+
+ 			$output[]=array(
+ 				"idP" => $id,
+ 				"Nom" => $nom,
+ 				"Prenom" => $prenom
+
+ 				);
+ 			
  			// concatenation du nom et prenom 
- 			$output .= '<div id="in">'.$prenom.' '.$nom.'</div>';
+ 			//$output .= '<div id="in">'.$prenom.' '.$nom.'</div>';
  		}
  	}
  }
-	echo ($output);
+ 	echo json_encode($output);
+	//echo ($output);
 
 ?>
 
-<script type="text/javascript">
-$("#in").click(function(){
-	//alert($("#in").text());
-	$("#nom").val($("#in").text());
-});
-
-</script>

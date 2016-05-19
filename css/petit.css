@@ -431,3 +431,66 @@ th {
     font-size: 13px;
 
 }
+/****************bar de recherche**********************************************************/
+#barRecherche{
+    width: 250;
+    font-family: book;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-left: 15%;
+}
+#nom{
+    width: 140px;
+    height: 30px;
+}
+.adherent_preview {
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+}
+.adherent_preview:hover {
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+}
+#selectionner{
+    width:90px;
+    height: 30px;
+}
+#output{
+    width:140px;
+    margin-left: 15%;
+    font-size: 14px;
+}
+/**********************************fiche adherent*************************************************************************/
+ 
+.fiche{
+    width: 100%;
+    margin: auto;
+}
+ #ficheAdherent{
+    margin-left: 5%;
+    width: 35%;
+    margin-top: 2%;
+    float: left;
+}
+.fiche label {
+    margin-bottom: 5px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+.titre{
+    text-align: left;
+    font-size: 16px;
+}
+#abonnement{
+    float: right;
+    margin-right: 5%;
+    width:30%;
+    margin-top: 2%
+}
+#modifSaved{
+    margin-left: 15%;
+    font-size: 18px;
+    color: #2c4271;
+
+}

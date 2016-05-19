@@ -2,7 +2,7 @@
 <?php
 
 
-       require_once("connectdb.php");
+       require_once("services/connectdb.php");
        $dbh = connect();
 
             // Pour tester s'il a des cookies "idPerson" et "token"
@@ -21,6 +21,12 @@
                 
 
                 include("menuOff.php");
+
+                        ?>
+                        <script type="text/javascript">
+                        document.location.href="abonnement.php"
+                        </script>
+                        <?php
             }
             else 
             {
@@ -36,6 +42,7 @@
                 if($row>0){
               
                 include("menuOnAdmin.php");
+                
                 }
                 else 
                 {
@@ -45,7 +52,8 @@
         }
         else
         {
-            include("menuOff.php"); 
+            include("menuOff.php");
+             
         }
 
 ?>       
