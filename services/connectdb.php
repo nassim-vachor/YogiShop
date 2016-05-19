@@ -10,7 +10,10 @@ try {
 
 function connect() {
 	try {
-    	return new PDO('mysql:host=localhost;dbname=yogishop', 'root', '');
+    	$dbh = new PDO('mysql:host=localhost;dbname=yogishop', 'root', '');
+    	 $dbh -> exec("set names utf8");
+
+    	 return $dbh;
 	} catch (PDOException $e) {
     	echo 'Connexion échouée : ' . $e->getMessage();
 	}

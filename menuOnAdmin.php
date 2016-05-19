@@ -30,7 +30,7 @@ catch (Exception $e)
                         <nav class="navBarPetit">
                   <ul id="navAdmin">    
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Reservation</strong></a>
+                    <li class="nav-item"><a href="calendrier.php"><strong>Reservation</strong></a>
                         <ul>
                           <li><a href="#">Préparer PLanning</a></li>
                           <li><a href="#">Gestion Séances</a></li>

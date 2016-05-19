@@ -431,3 +431,109 @@ th {
     font-size: 13px;
 
 }
+
+ /******************************AjoutSeance*****************************/
+
+ .ajoutSeance-popup {
+    width: 300px;
+    height: 460px;
+
+}
+form.formSeance.textboxSeance input { 
+    width: 220px;
+    height: 30px;
+
+}
+#titreSeance label{
+  margin-bottom: 0px;
+}
+
+fieldset {
+  margin-right: 15px;
+  margin-left: 80px;
+}
+form.signin input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.signin input::-webkit-input-placeholder {
+    color: #424242;
+  
+}
+
+form.formSeance.textboxSeance label{
+  margin-left: 40%;
+
+}
+.btAjoutSeance {
+
+   margin-top: 50px;
+    margin-right: 10.5%;
+    width: 40px;
+    }
+
+
+  .buttonSubmit{  
+    width: 100px;
+    height: 40px;
+    margin-left: 0px;
+}
+
+#ajoutSeance_error
+{
+    text-align: center;
+    font-size: 12px;
+    margin-left: -50px;
+
+}
+ /******************************AnnulSeance*****************************/
+
+
+  .annulSeance-popup {
+    width: 300px;
+    height: 350px;
+}
+
+
+form.formSeance2.textboxSeance2 label {
+
+    width: 10px;
+
+  
+
+}
+form.formSeance2 .textboxSeance2  input {
+    width: 200px;
+    height: 40px;
+}
+.buttonSubmit2{  
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.textboxSeance2
+{
+  margin-left: 40px;
+  margin-right: 0px;
+}
+/* Fenetre login */
+/*.login-popup {
+ 
+    width: 250px;
+    height: 280px;
+ 
+}
+
+
+form.signin .textbox input {
+    width: 180px;
+    height: 30px;
+}
+
+
+.button {
+    width: 180px;
+    height: 30px;
+}*/

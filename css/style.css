@@ -277,7 +277,7 @@ width: 50%;
 */
 
 /* Mask for background, by default is not display */
-#mask {
+#mask,#maskAjoutSeance,#maskAnnulSeance,#maskModifSeance {
     display: none;
     background: #000;
     position: fixed;
@@ -325,6 +325,13 @@ fieldset {
     margin-top: 2%;
     margin-left: 10%;
     margin-right: 10%;
+
+}
+.formSeance3 fieldset
+{
+    width: 90%;
+    margin-right: 3%;
+    margin-left: 3%;
 }
 
 form.signin .textbox label {
@@ -395,3 +402,397 @@ label {
 .user {
     width: 40%;
 }
+
+
+
+        /******************************************************Ajouter seance ****************************************************************/
+
+.ajoutSeance-popup {
+    display: none;
+    background:#fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999999;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999;
+    /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999;
+    /* Safari, Chrome */
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+        -webkit-border-radius: 3px;
+    /* Safari, Chrome */;
+}
+
+#titreSeance{
+    text-align: center;
+    font-size: 22px;
+    color: #337ab7;
+    font-style: bold;
+}
+
+
+
+form.formSeance .textboxSeance label {
+    display: block;
+    padding-bottom: 7px;
+
+}
+
+form.formSeance .textboxSeance  span {
+    display: block;
+}
+
+form.formSeance p, form.formSeance span {
+    color: #0c3559;
+    font-size: 18px;
+    font-family: arial;
+    margin-bottom: 5px;
+    line-height: 18px;
+}
+
+form.formSeance .textboxSeance  input , form.formSeance .textboxSeance  select{
+    background: #E0E0E0;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #000;
+    border-right: 1px solid #333;
+    border-top: 1px solid #000;
+    color: #111;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 13px Arial, Helvetica, sans-serif;
+    padding: 6px 6px 4px;
+    width: 250px;
+    height: 40px;
+    float: right;
+
+ 
+}
+
+form.formSeance input:-moz-placeholder , form.formSeance select :-moz-placeholder{
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.formSeance input::-webkit-input-placeholder, form.formSeance select::-webkit-select-placeholder  {
+    color: #424242;
+  
+}
+
+
+.buttonSubmit {
+    background: #00E676;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+    border-color: #00E676;
+    border-width: 1px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    margin-top: 10px;
+    font: 12px;
+
+}
+
+    .ajoutButton{
+    background: #49c0eb;
+  background-image: -webkit-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -moz-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -ms-linear-gradient(top, #49c0eb, #020d45);
+  background-image: -o-linear-gradient(top, #49c0eb, #020d45);
+  background-image: linear-gradient(to bottom, #49c0eb, #020d45);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+  width: 135px;
+  float:none;
+  /*  margin-right: 40%;
+  margin-left: 40%;*/
+  margin-top: 10%;
+    }
+ 
+#ajoutSeance_error
+{
+    font-weight: bold;
+    text-align: center;
+
+}
+   /******************************************************Annuler seance ****************************************************************/
+
+   .annulSeance-popup {
+    display: none;
+    background:#fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999999;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999;
+    /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999;
+    /* Safari, Chrome */
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+        -webkit-border-radius: 3px;
+    /* Safari, Chrome */;
+}
+
+#titreSeanceAnnul{
+    text-align: center;
+    font-size: 22px;
+    color: #337ab7;
+    font-style: bold;
+}
+
+
+
+form.formSeance2 .textboxSeance2 label {
+    display: block;
+    padding-bottom: 15px;
+
+}
+
+form.formSeance2 .textboxSeance2  span {
+    display: block;
+}
+
+form.formSeance2 p, form.formSeance2 span {
+    color: #0c3559;
+    font-size: 18px;
+    font-family: arial;
+    margin-bottom: 5px;
+    line-height: 18px;
+}
+
+form.formSeance2 .textboxSeance2  input {
+    background: #E0E0E0;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #000;
+    border-right: 1px solid #333;
+    border-top: 1px solid #000;
+    color: #111;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 13px Arial, Helvetica, sans-serif;
+    padding: 6px 6px 4px;
+    width: 300px;
+    height: 40px;
+ 
+
+ 
+}
+
+form.formSeance2 input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.formSeance2 input::-webkit-input-placeholder {
+    color: #424242;
+  
+}
+
+
+.buttonSubmit2 {
+    background: #F35E5E;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+    border-color: #F35E5E;
+    border-width: 1px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    margin-top: 0px;
+    font: 12px;
+
+}
+
+    .annulButton{
+    background: #BD2E2E;
+  
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+  width: 140px;
+    float:none;
+    margin-left:140px;
+ /* margin-right: 40%;
+  margin-left: 40%;*/
+ margin-top: -40px;
+    }
+   #buttonCalendrier a{
+      color:  #ffffff;
+    }
+
+
+#buttonCalendrier{
+margin-left: 10%;
+
+
+}
+
+
+#annulSeance_error, #annulSeance_error2{
+    font-weight: bold;
+}
+
+
+/******************************************************Modifier seance ****************************************************************/
+ .modifSeance-popup {
+    display: none;
+    background:#fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    z-index: 99999999;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999;
+    /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999;
+    /* Safari, Chrome */
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+        -webkit-border-radius: 3px;
+    /* Safari, Chrome */;
+}
+
+#titreSeanceModif{
+    text-align: center;
+    font-size: 22px;
+    color: #337ab7;
+    font-style: bold;
+}
+
+
+
+form.formSeance3 .textboxSeance3 label {
+    display: block;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+form.formSeance3 .textboxSeance3  span {
+    display: block;
+}
+
+form.formSeance3 p, form.formSeance3 span {
+    color: #0c3559;
+    font-size: 18px;
+    font-family: arial;
+    margin-bottom: 5px;
+    line-height: 18px;
+}
+
+form.formSeance3 .textboxSeance3  input {
+    background: #E0E0E0;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #000;
+    border-right: 1px solid #333;
+    border-top: 1px solid #000;
+    color: #111;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 13px Arial, Helvetica, sans-serif;
+    padding: 6px 6px 4px;
+    width: 150px;
+    height: 35px;
+
+
+}
+
+form.formSeance3 input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.formSeance3 input::-webkit-input-placeholder {
+    color: #424242;
+  
+}
+
+
+.buttonSubmit3 {
+    background: #F35E5E;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+    border-color: #F35E5E;
+    border-width: 1px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    margin-top: 5px;
+    font: 12px;
+
+}
+
+    .modifButton{
+    background: #BD2E2E;
+  
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+  border: solid #1f628d 0px;
+  text-decoration: none;
+  width: 140px;
+    float:none;
+    margin-left:290px;
+ margin-top: -40px;
+    }
+
+
+
+#modifSeance_error, #modifSeance_error2{
+    font-weight: bold;
+}
+
+.textboxSeance3 label{
+    margin-bottom: 5px;
+}
+

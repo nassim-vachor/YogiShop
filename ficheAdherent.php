@@ -34,7 +34,7 @@ function searchq(){
 
 	var searchText = $("input[name='search']").val();
 
-	$.post("search.php" , {searchVal : searchText}, function(output){
+	$.post("services/search.php" , {searchVal : searchText}, function(output){
 		$("#output").html(output);
 	});
 }

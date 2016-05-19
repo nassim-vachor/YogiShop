@@ -290,17 +290,20 @@ form.signin .textbox input {
 }
 
 
-form.signin input:-moz-placeholder {
+form.formSeance input:-moz-placeholder {
     color: #bbb;
     text-shadow: 0 0 2px #000;
 }
 
-form.signin input::-webkit-input-placeholder {
+form.formSeance input::-webkit-input-placeholder {
     color: #424242;
   
 }
 
+
+
 .button {
+
     width: 250px;
     height: 40px;
 }
@@ -374,4 +377,65 @@ th {
 
     font-size: 18px;
 
+}
+
+
+
+ /******************************AjoutSeance*****************************/
+
+ .ajoutSeance-popup {
+    width: 500px;
+    height: 460px;
+}
+form.formSeance.textboxSeance input { 
+    width: 250px;
+    height: 40px;
+}
+
+
+form.signin input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.signin input::-webkit-input-placeholder {
+    color: #424242;
+  
+}
+
+
+  .buttonSubmit{  
+    width: 150px;
+    height: 40px;
+    margin-left: 175px;
+    margin-top: 30px;
+}
+
+
+ /******************************AnnulSeance*****************************/
+
+  .annulSeance-popup {
+    width: 400px;
+    height: 350px;
+}
+
+form.formSeance2.textboxSeance2 label {
+
+    width: 50px;
+  
+
+}
+
+
+form.formSeance2.textboxSeance2 input {
+
+    width: 300px;
+    height: 40px;
+
+}
+
+.buttonSubmit2{  
+    width: 180px;
+    height: 40px;
+    margin-left: 40px;
 }

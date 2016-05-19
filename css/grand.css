@@ -324,3 +324,101 @@ th {
     font-size: 22px;
 
 }
+
+/***************************************************************AjoutSeance*******************************************************************************************/
+
+
+ 
+    .ajoutSeance-popup {
+    width: 500px;
+    height: 460px;
+}
+
+form.formSeance.textboxSeance label {
+
+    width: 50px;
+  
+
+}
+form.formSeance.textboxSeance input, form.formSeance.textboxSeance select{
+
+    width: 250px;
+    height: 40px;
+
+}
+
+.buttonSubmit{  
+    width: 150px;
+    height: 40px;
+    margin-left: 170px;
+    margin-top: 30px;
+}
+
+
+
+
+/***************************************************************AnnulSeance*******************************************************************************************/
+
+ 
+    .annulSeance-popup {
+    width: 400px;
+    height: 350px;
+}
+
+form.formSeance2.textboxSeance2 label {
+
+    width: 50px;
+  
+
+}
+
+
+form.formSeance2.textboxSeance2 input {
+
+    width: 300px;
+    height: 40px;
+
+}
+
+.buttonSubmit2{  
+    width: 180px;
+    height: 40px;
+    margin-left: 40px;
+}
+
+
+
+
+/***************************************************************modifSeance*******************************************************************************************/
+
+ 
+    .modifSeance-popup {
+    width: 450px;
+    height: 480px;
+}
+
+form.formSeance3.textboxSeance3 label {
+
+    width: 50px;
+  
+
+}
+
+
+form.formSeance3 .textboxSeance3 input {
+
+    width: 180px;
+    float: right;
+
+}
+
+.buttonSubmit3{  
+    width: 140px;
+    height: 40px;
+    margin-left: 140px;
+}
+
+.textboxSeance3 select{
+    width: 180px;
+    float: right;
+}
