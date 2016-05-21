@@ -377,3 +377,210 @@ var myselectSeance = $( "#myselectSeance option:selected" ).val();
 	});
 }
 }
+
+///********************************************************************************************/
+function getSeances(dateDeb, dateFin, success){
+console.log(dateDeb, dateFin);
+if(!dateDeb || !dateFin){
+	alert('Veuillez remplir tous les champs');
+}
+
+else{
+	//Etape 2: faire la requete ajax
+	console.log("ok4")
+	$.ajax({
+	  url: "ajax/events_ajax.php",
+	  method: "GET",
+	  data: {
+	  	dateDeb: dateDeb / 1000,
+	  	dateFin: dateFin / 1000
+	  },
+	  success: function(result) {
+	  	console.log(result);
+	 	var res = JSON.parse(result);
+	 	success(res)
+	  },
+	  error: function(err) {
+	  	alert("Erreur serveur");
+	  
+	  }
+	});
+}
+}
+
+function addSeance(jourSeance,heureDeb, heureFin,nvJourSeance,nvHeureDeb,nvHeureFin, nbPlace,nomCoach,prenomCoach){
+
+
+
+	// un des champs est vide 
+	if(!jourSeance || !heureDeb || !heureFin || !nbPlace){
+		alert('Veuillez remplir tous les champs');
+
+	}
+
+	else{
+	//Etape 2: faire la requete ajax
+	$.ajax({
+	  url: "ajax/events_ajax.php",
+	  method: "POST",
+	  data: {
+	  	jourSeance:jourSeance,
+	  	heureDeb: heureDeb,
+	    heureFin: heureFin,
+	    nvJourSeance: nvJourSeance,
+	    nvHeureDeb: nvHeureDeb,
+	    nvHeureFin: nvHeureFin,
+	    nbPlace: nbPlace,
+	    nomCoach: nomCoach,
+	    prenomCoach: prenomCoach
+	  },
+	  success: function(result) {
+	  	console.log(result);
+	 	var res = JSON.parse(result);
+
+	    if(res.estInserer) {
+	    	alert("Félicitations la séance a bien été effectuée");
+	    
+	    }
+	    	
+	    else {
+	    	alert("Erreur, ajout non effectué, veuillez recommencez!!");
+	    	//location.reload();
+	    }
+	  },
+	  error: function(err) {
+	  	alert("Erreur serveur");
+	  
+	  }
+	});
+}
+}
+
+function updateSeance(jourSeance,heureDeb, heureFin,nvJourSeance,nvHeureDeb,nvHeureFin,nbPlace,nomCoach,prenomCoach){
+
+
+
+	// un des champs est vide 
+	if(!jourSeance || !heureDeb || !heureFin || !nvJourSeance || !nvHeureDeb || !nvHeureFin){
+		alert('Veuillez remplir tous les champs');
+
+	}
+
+	else{
+	//Etape 2: faire la requete ajax
+	$.ajax({
+	  url: "ajax/events_ajax.php",
+	  method: "POST",
+	  data: {
+	  	jourSeance:jourSeance,
+	  	heureDeb: heureDeb,
+	    heureFin: heureFin,
+	    nvJourSeance:nvJourSeance,
+	    nvHeureDeb: nvHeureDeb,
+	    nvHeureFin: nvHeureFin,
+	    nbPlace: nbPlace,
+	    nomCoach: nomCoach,
+	    prenomCoach: prenomCoach
+	  },
+	  success: function(result) {
+	  	console.log(result);
+	 	var res = JSON.parse(result);
+
+	    if(res.isUpdated) {
+	    	alert("Félicitations la séance a bien été modifiée");
+	    
+	    }
+	    	
+	    else {
+	    	alert("Erreur, mise à jour non effectué, veuillez recommencez!!");
+	    	//location.reload();
+	    }
+	  },
+	  error: function(err) {
+	  	alert("Erreur serveur");
+	  
+	  }
+	});
+}
+}
+
+$(document).ready(function() {
+	var year = new Date().getFullYear();
+var month = new Date().getMonth();
+var day = new Date().getDate();
+
+var eventData = {
+events : [
+  {'id':1, 'start': new Date(year, month, day, 12), 'end': new Date(year, month, day, 13, 35),'title':'Lunch with Mike'},
+  {'id':2, 'start': new Date(year, month, day, 14), 'end': new Date(year, month, day, 14, 45),'title':'Dev Meeting'},
+  {'id':3, 'start': new Date(year, month, day + 1, 18), 'end': new Date(year, month, day + 1, 18, 45),'title':'Hair cut'},
+  {'id':4, 'start': new Date(year, month, day - 1, 8), 'end': new Date(year, month, day - 1, 9, 30),'title':'Team breakfast'},
+  {'id':5, 'start': new Date(year, month, day + 1, 14), 'end': new Date(year, month, day + 1, 15),'title':'Product showcase'}
+]
+};
+console.log("ok2")
+var endDate = new Date()
+// rajoute 300 jours au debut du mois 
+endDate.setDate(endDate.getDate() + 300);
+
+getSeances(new Date(), endDate, function(seances) {
+	console.log(seances);
+	$('#calendar').weekCalendar({
+	  timeslotsPerHour: 6,
+	  timeslotHeigh: 30,
+	  hourLine: true,
+	  use24Hour: true,
+	  dateFormat: "d-M-Y",
+	  useShortDayNames: false,
+	  buttonText: { today: "Aujourd'hui" },
+	  businessHours: {
+	  	start: 8,
+	  	end: 20,
+	  	limitDisplay: true
+	  },
+	  data: {
+	  	events: seances
+	  },
+	  height: function($calendar) {
+	  	 console.log("ok");
+	     return $(window).height();
+	  },
+	  eventRender : function(calEvent, $event) {
+	    if (calEvent.end.getTime() < new Date().getTime()) {
+	      $event.css('backgroundColor', '#aaa');
+	      $event.find('.time').css({'backgroundColor': '#999', 'border':'1px solid #888'});
+	    }
+	  },
+	  eventNew: function(calEvent, $event) {
+
+	    displayMessage('<strong>Added event</strong><br/>Start: ' + calEvent.start + '<br/>End: ' + calEvent.end + calEvent.title);
+	    $("#jourSeanceD").val( calEvent.end.getDate()+"/"+ calEvent.end.getMonth()+"/"+calEvent.end.getFullYear() );
+	     $("#heureSeanceC").val(calEvent.start.getHours()+":" +calEvent.start.getMinutes());
+	      $("#heureSeanceFin").val(calEvent.end.getHours()+":" +calEvent.end.getMinutes());
+	  //  console.log(calEvent.start.format('h:mm:ss A'));
+	    showModal("#ajoutSeance-box");
+	  },
+	  eventDrop: function(calEvent, $event) {
+	    displayMessage('<strong>Moved Event</strong><br/>Start: ' + calEvent.start + '<br/>End: ' + calEvent.end);
+	  },
+	  eventResize: function(calEvent, $event) {
+	    displayMessage('<strong>Resized Event</strong><br/>Start: ' + calEvent.start + '<br/>End: ' + calEvent.end);
+	  },
+	  eventClick: function(calEvent, $event) {
+	    displayMessage('<strong>Clicked Event</strong><br/>Start: ' + calEvent.start + '<br/>End: ' + calEvent.end);
+	  },
+	  eventMouseover: function(calEvent, $event) {
+	    displayMessage('<strong>Mouseover Event</strong><br/>Start: ' + calEvent.start + '<br/>End: ' + calEvent.end);
+	  },
+	  eventMouseout: function(calEvent, $event) {
+	    displayMessage('<strong>Mouseout Event</strong><br/>Start: ' + calEvent.start + '<br/>End: ' + calEvent.end);
+	  },
+	  noEvents: function() {
+	    displayMessage('There are no events for this week');
+	  }
+	});
+});
+function displayMessage(message) {
+  $('#message').html(message).fadeIn();
+}
+});

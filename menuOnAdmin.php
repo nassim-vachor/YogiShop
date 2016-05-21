@@ -48,7 +48,5 @@
                  
 
         	</header>
-        <script type="text/javascript" src="js/petit.js"></script>
-        <script type="text/javascript" src="js/connex.js"></script>
         <div id="mainContainer">
             <section id="content"> 

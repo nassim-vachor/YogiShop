@@ -25,7 +25,7 @@ $(document).ready(function() {
     });
     
     // When clicking on the button close or the maskAnnulSeance layer the popup closed
-    $('a.close, #maskAnnulSeance').on('click', function() { 
+    $('a.close, #maskAnnulSeance').click(function() { 
       $('#maskAnnulSeance , .annulSeance-popup').fadeOut(300 , function() {
         $('#maskAnnulSeance').remove();  
     }); 

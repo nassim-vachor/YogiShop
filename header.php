@@ -4,57 +4,42 @@
 
        require_once("services/connectdb.php");
        $dbh = connect();
+       require_once("services/authentification.php");
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css-Bootstrap/bootstrap.css">
+         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-            // Pour tester s'il a des cookies "idPerson" et "token"
-        if (isset($_COOKIE['id']) && isset($_COOKIE['token']))
-        {
-            // si oui on les stocke dans des variables
-            $id = $_COOKIE['id'];
-            $requete = $dbh->query("SELECT Token FROM Person WHERE idPerson = '$id'");
-            $row=$requete->fetch();
- 
-            //on verifie si le token est vide ou si le token recuperé est different de celle de la bd 
-            // ou si son token est egal a 0 (dans ce cas, la personne est deconnectée)
-            if(!isset($_COOKIE['token']) || $_COOKIE['token'] == '0' || $row['Token'] != $_COOKIE['token'])
-            {
-                // tu est deconnecte => button connexion
-                
+        <link rel='stylesheet' type='text/css' href='https://code.jquery.com/ui/1.9.0/themes/smoothness/jquery-ui.css' />
+        <link rel='stylesheet' type='text/css' href='css/jquery.weekcalendar.css' />
+        
+          <!-- utilisation de style.css pour les differents types d ecrans (responsives) 1024-->
 
-                include("menuOff.php");
+        <link rel="stylesheet" media="screen and (min-width:1200px)"  href="css/grand.css" >
+        <link rel="stylesheet" media="screen and (min-width:770px) and (max-width:1200px)  "  href="css/moyen.css"  >
+        <link rel="stylesheet" media="screen and  (max-width:770px) "  href="css/petit.css"  >
 
-                        ?>
-                        <script type="text/javascript">
-                        document.location.href="abonnement.php"
-                        </script>
-                        <?php
+       
+        <title>YogiShop | <?php echo $title; ?></title>
+    </head>
+    <body>
+        <div class="site-pusher">
+<?php 
+            if($_USER["isConnected"]) {
+                if($_USER["isAdmin"]) {
+                    include("menuOnAdmin.php");
+                }
+                else {
+                    include("menuOnUser.php");
+                }
             }
-            else 
-            {
-               // la personne est connectée => button connexion
+            else {
+                include("menuOff.php");
+            }
 
-                // on selectionne les admin 
-
-                $requete = $dbh->query("SELECT idPerson FROM Person WHERE $id = idPerson and EstAdmin = 1");
-                $row =$requete->fetch();
-
-                // verification du type de personne : admin ou adherent
-                // user connecte :
-                if($row>0){
-              
-                include("menuOnAdmin.php");
-                
-                }
-                else 
-                {
-                     include("menuOnUser.php");
-                }
-            } 
-        }
-        else
-        {
-            include("menuOff.php");
-             
-        }
 
 ?>       
 		

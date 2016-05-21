@@ -964,3 +964,39 @@ form.formSeance3 input::-webkit-input-placeholder {
     margin-bottom: 5px;
 }
 
+.wc-toolbar{font-size:12px;padding:2px 5px;margin:0}
+.wc-toolbar h1{font-size:14px;font-weight:bold;}
+.wc-toolbar .ui-buttonset{font-size:0.8em;}
+.wc-toolbar .wc-title{text-align:left;}
+.wc-header{font-size:11px;}
+.wc-grid-timeslot-header, 
+.wc-header .wc-time-column-header{width:45px;}
+.wc-time-header-cell{font-size:11px;}
+.wc-business-hours .wc-time-header-cell{font-weight:bold;}
+.wc-am-pm,
+.wc-business-hours .wc-am-pm {font-size:1em;}
+.wc-header .wc-today  {font-weight: bold;}
+/* colors */
+.wc-container{border-left:5px solid #BBCCFF;}
+.wc-toolbar{background:#BBCCFF;border:none;}
+.wc-header{background:#E3E9FF;border:none;}
+.wc-header{border-bottom:2px solid #BBCCFF;}
+.wc-hour-end, .wc-hour-header{color:#666666;border-color:#ccc}
+.wc-hour-header,
+.wc-grid-timeslot-header,
+.wc-business-hours{background:#F6F9FC;}
+.wc-column-odd{background:transparent;}
+.wc-column-even{background:#ddddbe;}
+.wc-time-slots .wc-today {background-color: #ffffcc;}
+.wc-scrollable-grid .wc-day-column-last,
+.wc-scrollable-grid .wc-day-column-middle,
+.wc-scrollable-grid .wc-day-column-first{border-color:#ddd;}
+/*calendar*/
+.wc-day-column-first,
+.wc-day-column-last,
+.wc-day-column-middle,
+.wc-time-slot{border-color: #ccc;}
+.wc-header .wc-day-column-header.wc-today{background-color:#FAD163;border-color:#FAD163;}
+.wc-header .wc-today.wc-user-header{font-weight:normal;}
+.wc-today.wc-day-column-last{border-right:3px double #FAD163;}
+.wc-today.wc-day-column-first{border-left:3px double #FAD163;}

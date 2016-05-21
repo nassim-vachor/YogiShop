@@ -47,3 +47,5 @@ $min2=$dateFin2['minute'];
 	
 	return $reslt;
 }
+
+

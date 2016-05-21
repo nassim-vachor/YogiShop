@@ -1,26 +1,6 @@
-
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css-Bootstrap/bootstrap.css">
-         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
- 
-          <!-- utilisation de style.css pour les differents types d ecrans (responsives) 1024-->
-
-        <link rel="stylesheet" media="screen and (min-width:1200px)"  href="css/grand.css" >
-        <link rel="stylesheet" media="screen and (min-width:770px) and (max-width:1200px)  "  href="css/moyen.css"  >
-        <link rel="stylesheet" media="screen and  (max-width:770px) "  href="css/petit.css"  >
-
-       
-        <title>YogiShop</title>
-    </head>
-    <body>
-        <div class="site-pusher">
-
-<?php include("header.php"); ?> 
+<?php 
+$secure_level = 0;
+include("header.php"); ?> 
 			  <meta name="viewport" content="width=device-width, initial-scale=1">
 			<!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 
