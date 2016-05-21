@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css-Bootstrap/bootstrap.css">
-         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
- 
-          <!-- utilisation de style.css pour les differents types d ecrans (responsives) -->
-        <link rel="stylesheet" media="screen and (min-width:1024px)"  href="css/grand.css" >
-        <link rel="stylesheet" media="screen and (min-width:750px) and (max-width:1024px)  "  href="css/moyen.css"  >
-        <link rel="stylesheet" media="screen and  (max-width:750px) "  href="css/petit.css"  >
+    <?php include("header.php"); ?>
 
-       
-        <title>Fiche Adhrent</title>
-    </head>
-    <body>
-        <div class="site-pusher">
-
-	<?php include("header.php"); ?>
-
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 
@@ -32,7 +13,7 @@
 // fonction pour rechercher le nom et prenom de l'adherent
 function searchq(){
     $("#output").empty();
-	var searchText = $("input[name='search']").val();
+    var searchText = $("input[name='search']").val();
     console.log(searchText);
     if(searchText.length) {
             $.post("services/search.php" , {searchVal : searchText}, function(output){
@@ -57,8 +38,8 @@ function searchq(){
 </script>
 
 <form id="barRecherche" action="" method="post">
-	<input type="text" required ="required" id = "nom" name= "search" autocomplete="off" placeholder="Rechercher un adhérent" oninput= "searchq();"/>
-	<input type="hidden" name="idPerson" id="idHidden">
+    <input type="text" required ="required" id = "nom" name= "search" autocomplete="off" placeholder="Rechercher un adhérent" oninput= "searchq();"/>
+    <input type="hidden" name="idPerson" id="idHidden">
     <input  type= "submit" name="selectionner" value="Sélectionner" id="selectionner" />
 </form>
 

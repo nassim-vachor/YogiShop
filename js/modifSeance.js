@@ -25,7 +25,7 @@ $(document).ready(function() {
     });
     
     // When clicking on the button close or the maskModifSeance layer the popup closed
-    $('a.close, #maskModifSeance').on('click', function() { 
+    $('a.close, #maskModifSeance').click(function() { 
       $('#maskModifSeance , .modifSeance-popup').fadeOut(300 , function() {
         $('#maskModifSeance').remove();  
     }); 

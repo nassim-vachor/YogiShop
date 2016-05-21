@@ -377,6 +377,7 @@ var myselectSeance = $( "#myselectSeance option:selected" ).val();
 	});
 }
 }
+
 /*********retourne les abonnement du type choisi************/
 
 function getAbonnement()
@@ -546,10 +547,10 @@ else{
 	  	$("#abo_error").text("Erreur serveur!");
 	  
 	  }
-	});
-	}
-}
 
+	});
+}
+}
 
 ///********************************************************************************************/
 function getSeances(dateDeb, dateFin, success){
