@@ -55,7 +55,7 @@ function deleteAbo(idAbonnement) {
 	//var type =  $("#typ").val(); 
 	//console.log(type);
 	//Etape 1: recuperer le email et le mdp et vérifier
-	var x =confirm("êtes-vous sûr de vouloir supprimer cet abonnement?");
+	var x =confirm("êtes-vous sûr de vouloir supprimer cet abonnement?\n Verifiez bien qu'aucune personne n'est abonnée à cet abonnement");
 	
 	// un des champs est vide
 	if(x) {
@@ -374,6 +374,180 @@ var myselectSeance = $( "#myselectSeance option:selected" ).val();
 	  	$("#annulSeance_error").text("Erreur serveur");
 	  
 	  }
+	});
+}
+}
+
+/*********retourne les abonnement du type choisi************/
+
+function getAbonnement()
+{
+
+
+var typeAbonnement = $("#typeAbo").val();
+if((typeAbonnement== 'A la séance') ||(typeAbonnement== 'Temporel')  ){
+
+	$.ajax({
+	  url: "ajax/abonnementsTypeChoisi_ajax.php",
+	  method: "POST",
+	  data: {
+	    typeAbonnement: typeAbonnement
+	   
+	  },
+	  success: function(result) {
+	
+	  	var res = JSON.parse(result);
+	  
+
+	  	// si aucune seance a cette date la 
+	    if(jQuery.isEmptyObject(res)) {
+	    	$("#aboDuType").empty();
+	    	$("#abo_error").text("Pas d'abonnements correspondant au type choisi!");
+	    	
+	    	//location.reload();
+	    }
+	    	// des seances ont ete retournees
+	    else {
+	    	if((typeAbonnement== 'A la séance')){
+	    		$("#nbseance").empty();
+	  			$("#dureeAbonnement").empty();
+	    		$("#dureeT").css("display", "none");
+	    	
+	    		$("#nbS").show();
+	    		
+	    	}
+	    	else {
+	    		 	
+	    		$("#nbseance").empty();
+	  			$("#dureeAbonnement").empty();
+	    		$("#nbS").css("display", "none");
+	  			$("#dureeT").show();
+	  				
+
+	    	}
+	    		
+	    		$("#aboDuType").empty();
+	    		$("#aboDuType").append('<option> </option>')
+
+	    	res.forEach(function(d){
+	    		$("#aboDuType").append('<option>' +d.Libelle+'</option>')
+
+	    	});
+	    	
+			//location.reload();
+	    	}
+	    	//e.empty();
+	    	//location.reload();
+	    
+	  },
+	  error: function(err) {
+	  	$("#annulSeance_error").text("Erreur serveur");
+	  
+	  }
+
+	});
+}
+else{
+	$("#aboDuType").empty();
+	$("#dureeAbonnement").empty();
+	$("#nbseance").empty();
+}
+}
+
+
+
+
+function getdetailsAbo()
+{
+
+var Abonnement = $("#aboDuType").val();
+  var type = $("#typeAbo").val();
+	
+	$.ajax({
+	  url: "ajax/detailAbonnement-ajax.php",
+	  method: "POST",
+	  data: {
+	    Abonnement: Abonnement,
+	    type: type
+	   
+	  },
+	  success: function(result) {
+	  	var res = JSON.parse(result);
+	  	
+	  	if (type=='A la séance') {
+	  	$("#dureeT").css("display", "none");
+	  	$("#nbS").show();
+	  	$("#nbseance").empty();
+	  	$("#nbseance").val(res.NbSeance);
+	  	}
+	  	else {
+	  
+	  	$("#nbS").css("display", "none");
+	  	$("#dureeT").show();
+	  	$("#dureeAbonnement").empty();
+	  	$("#dureeAbonnement").val(res.duree);
+	     }
+	    	
+	    $("#tarif").val(res.Tarif);
+	  },
+	  error: function(err) {
+	  	$("#annulSeance_error").text("Erreur serveur");
+	  
+	  }
+
+	});
+}
+
+function souscrire()
+{
+
+var idP = $("#idperson").val();
+var dateS = $("#dateS").val();
+var type = $("#typeAbo").val();
+var Abonnement = $("#aboDuType").val();
+var tarif = $("#tarif").val();
+var nbS = $("#nbseance").val();
+var duree = $("#dureeAbonnement").val();
+if ((!idP || !dateS || !type || !Abonnement || !tarif) || (! nbS && !duree)) {
+		$("#abo_error2").text("Veuillez remplir tous les champs");
+	}
+else{
+	$.ajax({
+	  url: "ajax/souscrireAbonnement_ajax.php",
+	  method: "POST",
+	  data: {
+	  	idP: idP,
+	  	dateS: dateS,
+	    Abonnement: Abonnement,
+	    type: type,
+	    tarif: tarif,
+	    nbS: nbS,
+	    duree : duree
+
+	   
+	  },
+	  success: function(result) {
+	  	var res = JSON.parse(result);
+	  	console.log(res);
+	  	if (res.estSouscrit) {
+	  		console.log('yes');
+	  		$("#abo_error2").empty();
+	  		$("#abo_error").text("Souscription enregistrées!");
+	  		setTimeout(function(){location.reload();},1000);
+	  	}
+	  	else{
+	  		console.log('no');
+	  		$("#abo_error").text("Souscription echouée!");
+	  	}
+
+	  
+
+	  },
+	  error: function(err) {
+	  	$("#abo_error").text("Erreur serveur!");
+	  
+	  }
+
 	});
 }
 }

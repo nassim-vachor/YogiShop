@@ -571,7 +571,96 @@ label {
     font-weight: bold
 }
 
+/***********************ajouter abonnement********************************************/
+.souscription-form{
+    width: 400px;
+    height: 520px;
 
+}
+#titreSouscription{
+    text-align: center;
+    color: #337ab7;
+
+}
+#titreSouscription label {
+ font-size: 26px;
+font-weight: bold;
+
+
+}
+#Buttonsouscription{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 20%;
+
+}
+.textbox{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+form.souscription-form .textbox div{
+    height: 50px;
+    
+}
+
+form.souscription-form .textbox div input, form.souscription-form .textbox div select {
+    background: #E0E0E0;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #000;
+    border-right: 1px solid #333;
+    border-top: 1px solid #000;
+    color: #111;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 13px Arial, Helvetica, sans-serif;
+    padding: 6px 6px 4px;
+    width: 200px;
+    height: 40px;
+    float: right;
+    margin-top: 10px;
+
+}
+form.souscription-form .textbox div label {
+    text-align: right;
+    float: left;
+
+
+}
+form.souscription-form input:-moz-placeholder , form.souscription-form select :-moz-placeholder{
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.souscription-form  input::-webkit-input-placeholder, form.souscription-form  select::-webkit-select-placeholder  {
+    color: #424242;
+  
+}
+
+.souscription-popup {
+    display: none;
+    background:#fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999999999;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999;
+    /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999;
+    /* Safari, Chrome */
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+        -webkit-border-radius: 3px;
+    /* Safari, Chrome */
+}
 
         /******************************************************Ajouter seance ****************************************************************/
 

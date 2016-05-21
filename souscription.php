@@ -153,7 +153,12 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
                             <td colspan=5 >Date expiration : <strong> <?php echo $dateE; ?> </strong> </td>
                         </tr>
                          <tr>
-                            <td colspan=5 > <button   type="submit" name="creer"  class="btn"><a href="#log-box" class="login-window">Nouvelle Souscription</button>
+                            <td colspan=5 > 
+                              <form method="post">
+                                <a style="color:white" href="#souscription-box" class="souscription-window"><button   type="submit" name="creer"  class="btn">Nouvelle Souscription
+                                </button>
+                              </form>
+                            </td>
                         </tr>
                         <tr>
                             <td colspan= 5 class="enteteHistorique" ></td>
@@ -169,7 +174,7 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
                             <th class ="th">Tarif</th>
                             <th class ="th">Date Souscription</th>
                             <th class ="th">Séances attribuées</th>
-                            <th class ="th">Date Expiration</th>
+                            <th class ="th">Durée</th>
                            
                            
                         </tr>
@@ -177,23 +182,15 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
                         
                          <?php
                         
-                             $sql=$dbh->query("SELECT Libelle, Tarif, DateSouscription, nbSeanceEffective, dateExpirationEffective FROM abonnement a , souscrire s 
+                             $sql=$dbh->query("SELECT Libelle, tarifEffective, DateSouscription, nbSeanceEffective, dureeEffective FROM abonnement a , souscrire s 
                               WHERE a.IdAbonnement = s.IdAbonnement and s.IdPerson= '$id'
-                              ORDER BY DateSouscription desc
-                              LIMIT 3 ");
+                              ORDER BY DateSouscription desc ");
                               
                          while ( $row =$sql->fetch() ){
-                             $dateS=$row["DateSouscription"];
-                             $dateS= date("d-m-Y",strtotime($dateS));
+                           $dateS=$row["DateSouscription"];
+                          $dateS= date("d-m-Y",strtotime($dateS));
 
-                             $dateExp=$row["dateExpirationEffective"];
-                             if ($dateExp=="0000-00-00"){
-                                        $dateExp = NULL;
-                                    }
-                            else{
-                                   $dateExp= date("d-m-Y",strtotime($dateExp));
-                                  }
-                             
+                                                               
                                 ?>
                             <tr id="trH">
                               
@@ -201,38 +198,92 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
                                               <? echo $row["Libelle"]; ?>
                                         </td>
                                         <td> 
-                                            <? echo $row["Tarif"]; ?> €
+                                            <? echo $row["tarifEffective"]; ?> €
                                         </td>
                                         <td>
                                             <? echo $dateS;?>
                                         </td>
-                                        <td>
+                                        <?php if ($row["nbSeanceEffective"]==0){
+                                          ?>
+                                          <td></td>
+                                          <?php
+                                        } else {
+                                          ?>
+                                           <td>
                                             <? echo $row["nbSeanceEffective"];?>
-                                        </td>
+                                          </td>
+                                          <?php
+
+                                        }
+                                       ?>
+                                        <?php if ($row["dureeEffective"] == 0){
+                                          ?>
+                                          <td> </td>
+                                           <?php
+                                        } else { ?>
                                         <td>
-                                            <? echo $dateExp;?>
+                                            <? echo $row["dureeEffective"];?>
                                         </td>
+                                        <?php
+                                      }
+                                      ?>
                             </tr>
                          <?php
                             }
                             ?>     
                 </table>            
         </div>
-         <div id="log-box" class="login-popup">
+         <div id="souscription-box" class="souscription-popup">
                     <a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-                      <form method="" action="" class="signin" >
+                      <form method="" action="" class="souscription-form" >
+                          <div id="titreSouscription"> <label >Nouvelle souscription</label></div>
                             <fieldset class="textbox">
-                             <div><img  class="user" src="images/user.png"  title="user" alt="user" /></div>
-                             <span id="login_error" style="color: red; font-size:12px"></span>
-                            <label class="username">
-                            <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Saisissez votre e-mail">
-                            </label>
-                            
-                            <label class="password">
-                            <input id="password" name="password" value="" type="password" placeholder="Mot de passe">
-                            </label>
-                            
-                            <button class="submit button" name="connecter" type="submit" onClick="login(); return false;">Connexion</button>
+                             <span id="abo_error" style="color:#00E676; font-size:16px; margin-left:25%;"></span>
+                            <span id="abo_error2" style="color:red; font-size:16px;"></span>
+                            <input  name="nome" id="idperson" value=<? echo $id; ?> required ="required" type=hidden> 
+                            <div>
+                            <label> Nom :</label>
+                            <input  name="nome" value=<? echo $n; ?> required ="required" type="text"  autocomplete="on"> 
+                            </div>
+                            <div>
+                            <label > Prénom :</label> 
+                            <input  name="prenom" value=<? echo $p; ?> required ="required" type="text">
+                            </div>
+                            <div>
+                             <label > Date de Souscription :</label>
+                            <input  id="dateS"name="date" value="" type="date" required ="required"> 
+                            </div>
+                            <div>
+                             <label > Type Abonnement :</label>
+                             <select name="type" required ="required" id="typeAbo" onchange="getAbonnement(); return false;">
+                                    <option></option>
+                                    <option>A la séance</option>
+                                    <option>Temporel</option>
+                             </select>
+                             </div>
+                             <div>
+                             <label >Abonnement :</label>
+                             <select id="aboDuType" name="abonnementType" onchange="getdetailsAbo(); return false;" required ="required" >
+
+                                <!-- Recuperation des abonnement du type choisi -->
+                               
+                              </select>
+                            </div>
+                            <div >
+                             <label>Tarif(€) :</label>
+                             <input type= "number"  id="tarif" name="nbS" required ="required" >
+                             </div>
+                             <div id="nbS">
+                             <label>Nombre de séances :</label>
+                             <input type= "number"  id="nbseance" name="nbS" required ="required" >
+                             </div>
+                             <div id="dureeT">
+                             <label>Durée (en jour):</label>              
+                             <input type="number" id="dureeAbonnement" name="duree" required ="required">
+                             </div>      
+                             <div>
+                            <button class="submit button" id="Buttonsouscription" name="connecter" type="submit" onClick="souscrire(); return false;">Souscrire</button>
+                            </div>
                             </fieldset>
                       </form>
               

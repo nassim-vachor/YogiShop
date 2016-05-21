@@ -18,14 +18,14 @@
                         <nav class="navBarPetit">
                   <ul id="navAdmin">    
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href="reservationAdmin.php"><strong>Réservation</strong></a>
+                    <li class="nav-item"><a><strong>Réservation</strong></a>
                         <ul>
                           <li><a href="calendrier.php">Préparer PLanning</a></li>
                           <li><a href="#">Gestion Séances</a></li>
                         </ul>
                    </li>
                     <li class="nav-item"><a href="abonnement.php"><strong>Abonnements</strong></a></li>
-                    <li class="nav-item"><a href="adherents.php"><strong>Adhérents</strong></a>
+                    <li class="nav-item"><a><strong>Adhérents</strong></a>
                         <ul>
                           <li><a href="inscriptionAdherent.php">Nouvel Adhérent</a></li>
                           <li><a href="ficheAdherent.php">Fiche Adhérent</a></li>

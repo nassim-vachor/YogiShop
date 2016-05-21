@@ -18,15 +18,12 @@
             if(!isset($_COOKIE['token']) || $_COOKIE['token'] == '0' || $row['Token'] != $_COOKIE['token'])
             {
                 // tu est deconnecte => button connexion
-                
-
+                 header("location:index.php");
                 include("menuOff.php");
+               
 
-                        ?>
-                        <script type="text/javascript">
-                        document.location.href="abonnement.php"
-                        </script>
-                        <?php
+
+                       
             }
             else 
             {

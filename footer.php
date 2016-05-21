@@ -13,6 +13,7 @@
       <script type="text/javascript" src="js/ajoutSeance.js"></script>
       <script type="text/javascript" src="js/modifSeance.js"></script>
        <script type="text/javascript" src="js/annulSeance.js"></script>
+       <script type="text/javascript" src="js/souscription.js"></script>
 
 	 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
