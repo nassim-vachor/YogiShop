@@ -1,4 +1,8 @@
-    <?php include("header.php"); ?>
+    <?php 
+    $title="Fiche Adhérent";
+    $secure_level = 2;
+
+    include("header.php"); ?>
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
@@ -66,7 +70,6 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
         $n= $row["Nom"];
         $p=$row["Prenom"];
         $age=$row["DateNais"];
-        $age= date("d-m-Y",strtotime($age));
         $tel=$row["Tel"];
         $email=$row["email"];
         $ville=$row["Ville"];
@@ -75,12 +78,12 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
         $job=$row["Profession"];
         $douleurs=$row["Douleurs"];
         $sexe=$row["Sexe"];
-
-
+        $nbs= $row["NbSeances"];
+        $duree=$row["DateExpiration"];
         ?>
  <fieldset class="fiche">
+    <p style=" width: 40%; margin-left: 30%; text-align: center; margin-top: 40px; font-size: 30px; color:#2c4271; "><? echo $p; ?> <? echo $n; ?></p>
     <div id="ficheAdherent">
-            
             <p class="titre">Informations Personnelles</p>
      <form  action="" method="post">
                 <div id="genre">
@@ -89,44 +92,48 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
                     <input type="radio" name="sexe" value="homme" <?php if ($sexe=="homme") {echo 'checked';} ?>>Homme<br>
                 </div>
                      <label for="nom">Nom:</label>
-                     <input type="text" name="nom1" class="form-control" id="nom1" value=<? echo $n; ?>   required ="required" >
+                     <input type="text" name="nom1" class="form-control" id="nom1" value="<?php echo $n; ?>"   required ="required" >
                     <label>Prénom:</label>
-                    <input type="text" name="prenom1" class="form-control" id="prenom" value=<? echo $p; ?>   required ="required">
+                    <input type="text" name="prenom1" class="form-control" id="prenom" value="<?php echo $p; ?>"   required ="required">
                     <label for="dateN">Date de naissance:</label>
-                    <input type="dateN" name="age" class="form-control" value=<? echo $age; ?> >
-                    <input type="hidden" name="idPerson" id="idHidden" value=<? echo $id; ?>>
+                    <input type="date" name="age" class="form-control" value="<?php echo $age; ?>" >
+                    <input type="hidden" name="idPerson" id="idHidden" value="<?php echo $id; ?>">
                   <label for="email">Email:</label>
-                <input type="email" name="email"class="form-control"  id="email" value=<? echo $email; ?>  required ="required">
+                <input type="email" name="email"class="form-control"  id="email" value="<?php echo $email; ?>"  required ="required">
                     
                <label for="tel">Téléphone:</label>
-              <input type="tel" name="tel" class="form-control" value=<? echo $tel; ?> >
+              <input type="tel" name="tel" class="form-control" value="<?php echo $tel; ?>" >
               <label for="job">Profession:</label>
-              <input type="job" name="job" class="form-control" value=<? echo $job; ?>  >
+              <input type="job" name="job" class="form-control" value="<?php echo $job; ?>"  >
         
              <label for="rue">Rue:</label>
-             <input type="rue" name="rue" class="form-control" value=<? echo $rue; ?> >
+             <input type="rue" name="rue" class="form-control" value="<?php echo $rue; ?>" >
             
             <label for="tel">Code Postal:</label>
-            <input type="cp" name="cp" class="form-control" value=<? echo $cp; ?> >
+            <input type="cp" name="cp" class="form-control" value="<?php echo $cp; ?>" >
             <label for="ville">Ville:</label>
-            <input type="ville" name="ville" class="form-control"value=<? echo $ville; ?>   >
+            <input type="ville" name="ville" class="form-control"value="<?php echo $ville; ?>"   >
             <label for="doul">Autres:</label>
-            <textarea rows="4" cols="50"  class="form-control" name="douleurs"> <? echo $douleurs; ?> </textarea>
+            <textarea rows="4" cols="50"  class="form-control" name="douleurs"><?php echo $douleurs; ?> </textarea>
+            <button type="submit" name="modif" class="btn btn-default">Enregistrer</button>
         </form>         
         </div>    
          <div id="abonnement">
                          <p class="titre">Abonnements</p>
                             <form method="POST" action="" role="form">
                                 <div class="form-group">
-                                    <label for="email1">Address email:</label>
-                                    <input type="email" name="email1"class="form-control" id="email1"  >
+                                    <label for="nbs">Nombre de séances restantes:</label>
+                                    <input type="nbs" name="nbs"class="form-control" id="nbs" value="<?php echo $nbs; ?>" >
+                                
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd1">Mot de passe</label>
-                                    <input type="password" name="mdp1" class="form-control" id="pwd1" >
+                                    <label for="duree">Date expiration</label>
+                                    <input type="date" name="duree" class="form-control" id="duree" value="<?php echo $duree; ?>">
                                 </div>
-                
-                                  <button type="submit" name="connecter" class="btn btn-default">Connexion</button>
+                                    <input type=hidden name="idPerso" id="idHidden" value="<?php echo $id; ?>">
+                                     <input type=hidden name="nom2" class="form-control" value="<?php echo $n; ?>">
+                                  <input type=hidden name="prenom2" class="form-control"  value="<?php echo $p; ?>">
+                                  <button type="submit" name="enreg" class="btn btn-default">Enregistrer modifications</button>
                             </form>
 
 
@@ -142,6 +149,8 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
 
   } 
   require_once("services/verifInscription.php");
-updateClientByAdmin(); 
+updateClientByAdmin();
+modifabonnementClient(); 
+  include("footer.php");
                   
 ?>

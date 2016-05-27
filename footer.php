@@ -4,8 +4,8 @@
 		    <footer id="mainFooter">
 		    </footer>
     </div>
-            <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
-              <script type='text/javascript' src='https://code.jquery.com/ui/1.9.0/jquery-ui.min.js'></script>
+            <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+              <script type='text/javascript' src='https://code.jquery.com/ui/1.9.1/jquery-ui.min.js'></script>
               <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
         <script type='text/javascript' src='js/jquery.weekcalendar.js'></script>
 

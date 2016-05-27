@@ -136,7 +136,7 @@
           return calEvent.title;
         },
         
-        shortMonths: ['Jan.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Aôut', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
+        shortMonths: ['Jan.', 'Fevr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Aôut', 'Sept.', 'Oct.', 'Nov.', 'Dec.'],
         longMonths: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
         longDays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],

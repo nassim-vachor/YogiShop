@@ -49,3 +49,97 @@ $min2=$dateFin2['minute'];
 }
 
 
+
+function ajoutSeanceClient($jourSeance2,$heureDeb){
+
+$dbh = connect();
+		  list($d, $m, $y) = explode('/', $jourSeance2);
+					$mk=mktime(0, 0, 0, $m, $d, $y);
+					$jourSeance2=strftime('%Y-%m-%d',$mk);
+		 			$dateDeb = new DateTime($jourSeance2);
+
+
+		  list($heure, $min) = explode(':', $heureDeb);
+					
+		 $dateDeb->add(new DateInterval('PT'.$heure.'H'.$min.'M'));
+		  $dateDeb =$dateDeb->format('Y-m-d H:i:s');
+
+			$inserer =0;
+
+			  $id = $_COOKIE['id'];
+
+			  //  verifier que date  < dateSeance  
+			 $dateActu = new DateTime();
+			 $date= Date('Y-m-d');
+			 $dateActu->add(new DateInterval(('PT0H')));
+		     $dateActu =$dateActu->format('Y-m-d H:i:s');
+
+		     // selection de nbPlace dans seance 
+		     $req=$dbh->query("SELECT * FROM SEANCE WHERE DateD='$dateDeb'");
+		     $row=$req->fetch();
+		     $place=$row["PlaceDispo"];
+		     $idSeance=$row['IdSeance'];
+
+		     // selection des donnes du clients
+		     $req=$dbh->query("SELECT * FROM Person WHERE IdPerson='$id'");
+		     $row=$req->fetch();
+		     $dateExpiration=$row['DateExpiration'];
+		     $NbSeance=$row['NbSeances'];
+		    // $NbSeance=$NbSeance-1;
+
+
+		     	// plus de place pour ce cours ou seance dans le passe
+			  if ($dateActu < $dateDeb and $place >0 ){
+
+			  	// client a un abonnement a la seance
+				  	if($dateExpiration< $date and $NbSeance>0){
+				  		$NbSeance=$NbSeance-1;
+				  		 $req3=$dbh->query("UPDATE Person SET NbSeances='$NbSeance' WHERE IdPerson='$id'");
+
+				  		  // modifier nbre de placedispo pour cette seance: decrementation
+				  		$place=$place-1;
+				  		$req4=$dbh->query("UPDATE Seance  SET PlaceDispo = $place WHERE IdSeance='$idSeance'");
+
+				  			// suppresioon dans la table inscrire du client 
+				  		 $req5=$dbh->query("INSERT INTO  s_incrire (IdSeance,IdPerson) VALUES
+				  		 	('$idSeance', '$id')");
+				  		 $inserer=$req5->rowCount();
+				  	}
+				  	// client a un abonnement temporel 
+				  	else if ($dateExpiration>= $date){
+				  		  // modifier nbre de placedispo pour cette seance: decrementation
+				  		$place=$place-1;
+				  		$req4=$dbh->query("UPDATE Seance  SET PlaceDispo = $place WHERE IdSeance='$idSeance'");
+
+				  			// suppresioon dans la table inscrire du client 
+				  		 $req5=$dbh->query("INSERT INTO  s_incrire (IdSeance,IdPerson) VALUES
+				  		 	('$idSeance', '$id')");
+				  		 $inserer=$req5->rowCount();
+
+				  	}
+				  	// pas d abonnement a la seance ni temporel
+				  	else {
+
+				  		$inserer= -1;
+
+				  	}
+
+
+				  	
+			}
+			  // reservation impossible car trop tard 
+			else if ($place <1) {
+			  	$inserer=-2;
+			}
+
+			// impossible d annuler seance dans le passe
+			else {
+
+				$inserer=-3;
+			}
+
+			 $reslt=array("inserer" =>$inserer);
+	       return $reslt;
+
+}
+

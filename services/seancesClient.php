@@ -3,7 +3,7 @@
 require_once("connectdb.php");
 //require_once("model.php");
 
-
+/*
 function addSeance($jourSeance,$heureDeb, $heureFin,$nbPlace) {
 	$dbh = connect();
 	$estInserer=false;
@@ -54,7 +54,7 @@ function addSeance($jourSeance,$heureDeb, $heureFin,$nbPlace) {
 			$coachId=0;
 		}
 */
-		$requete = $dbh->query("INSERT INTO Seance (DateD,DateF,PlaceDispo) VALUES ('$dateDeb','$dateFin','$nbPlace')");
+	/*	$requete = $dbh->query("INSERT INTO Seance (DateD,DateF,PlaceDispo) VALUES ('$dateDeb','$dateFin','$nbPlace')");
 		$estInserer= true;
 	}
 
@@ -62,9 +62,9 @@ function addSeance($jourSeance,$heureDeb, $heureFin,$nbPlace) {
 	
 	return $reslt;
 }
+*/
 
-
-function getSeance($dateDeb,$dateFin){
+function getSeanceClient($dateDeb,$dateFin){
 
 		$dbh = connect();
 	 $dateDeb =new DateTime($dateDeb);
@@ -76,9 +76,15 @@ function getSeance($dateDeb,$dateFin){
 	 $dateFin =new DateTime($dateFin);
 	 //$dateFin->add(new DateInterval('P100D'));
 	 $dateFin =$dateFin->format('Y-m-d H:i:s');
+	 $id= $_COOKIE["id"];
 	 
+	 $requete = $dbh->query("SELECT * FROM Seance s , s_incrire i 
+	 	WHERE i.IdPerson='$id' and i.IdSeance=s.IdSeance
+	 		and ( DateD BETWEEN  '$dateDeb' AND '$dateFin')
+		");
 
-	$requete = $dbh->query("SELECT * FROM Seance WHERE DateD BETWEEN  '$dateDeb' AND '$dateFin'");
+
+	//$requete = $dbh->query("SELECT * FROM Seance WHERE DateD BETWEEN  '$dateDeb' AND '$dateFin'");
 	$res = array();
 	while($row=$requete->fetch()){
 		$id=$row["IdSeance"];
@@ -96,4 +102,47 @@ function getSeance($dateDeb,$dateFin){
 	}
 	return $res;
 }
+
+// recuperer les seances auxquelles ne sont pas inscrits le client 
+function getOtherSeanceClient($dateDeb,$dateFin){
+
+		$dbh = connect();
+	 $dateDeb =new DateTime($dateDeb);
+	 $dateDeb =$dateDeb->format('Y-m-d H:i:s');
+
+	  // echo $dateDeb;
+	   // on ajoute un jour a la date de fin pour prendre compte des seances du dernier jour
+	//$dateFin=strtotime("+ 1 days", strtotime($dateFin));
+	 $dateFin =new DateTime($dateFin);
+	 //$dateFin->add(new DateInterval('P100D'));
+	 $dateFin =$dateFin->format('Y-m-d H:i:s');
+	 $id= $_COOKIE["id"];
+	 
+	 $requete = $dbh->query("SELECT * FROM Seance s 
+	 	WHERE s.IdSeance  NOT IN (SELECT IdSeance FROM s_incrire WHERE IdPerson='$id' )
+	 	AND  DateD BETWEEN  '$dateDeb' AND '$dateFin'
+		");
+
+
+	//$requete = $dbh->query("SELECT * FROM Seance WHERE DateD BETWEEN  '$dateDeb' AND '$dateFin'");
+	$res = array();
+	while($row=$requete->fetch()){
+		$id=$row["IdSeance"];
+		$start=$row["DateD"];
+		$end=$row["DateF"];
+		$place=$row["PlaceDispo"];
+		//$coach=$row["Coach"];
+		  $res[]=array(
+                    "idS" => $id,
+                    "start" => $start,
+                    "end" =>$end,
+                    "place"=>$place,
+
+                    //"coach"=>$coach
+                    );
+	}
+
+	return $res;
+}
+
 

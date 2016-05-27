@@ -23,9 +23,15 @@ function modifInfoSeance($jourSeanceModif,$myselectSeanceModif) {
 		 $row =$sql->fetch();  
 		//$dateDeb=$row["DateD"];
 		//$dateDeb->format('H:i');
+		 $dateDeb=new DateTime($dateDeb);
+		$dateDeb =$dateDeb->format('H:i');
+
 		$dateFin=$row["DateF"];
-		//$dateFin->format('H:i');
+		$dateFin=new DateTime($dateFin);
+		$dateFin =$dateFin->format('H:i');
+
+		$nbPlace=$row["PlaceDispo"];
 	
-	       $reslt=array("datedeb"=>$dateDeb, "datefin" =>$dateFin);
+	       $reslt=array("datedeb"=>$dateDeb, "datefin" =>$dateFin , "nbPlace" =>$nbPlace) ;
 	       return $reslt;
 	}

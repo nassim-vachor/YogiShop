@@ -1,6 +1,7 @@
 
 <?php 
-$secure_level = 1;
+$title="YogiShop";
+$secure_level = 0;
 include("header.php"); ?>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
@@ -63,7 +64,7 @@ include("header.php"); ?>
 
 				<tr>
 					<td>Forfait année </td>
-					<td> 20 €</td>
+					<td> 290 €</td>
 				</tr>
 
 				<tr>

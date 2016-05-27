@@ -1,4 +1,7 @@
-  <?php include("header.php"); ?>
+  <?php 
+  $title="Souscription";
+  $secure_level = 2;
+  include("header.php"); ?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
@@ -123,7 +126,7 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
                                         $dateE = NULL;
                                     }
                             else{
-                                $dateE= date("d-m-Y",strtotime($dateE));
+                                $dateE= date("d - m - Y",strtotime($dateE));
 
                             }
                         ?>
@@ -216,15 +219,15 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
         </div>
          <div id="souscription-box" class="souscription-popup">
                     <a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-                      <form method="" action="" class="souscription-form" >
+                      <form method="post" action="impressionContrat.php" class="souscription-form" >
                           <div id="titreSouscription"> <label >Nouvelle souscription</label></div>
                             <fieldset class="textbox">
                              <span id="abo_error" style="color:#00E676; font-size:16px; margin-left:25%;"></span>
                             <span id="abo_error2" style="color:red; font-size:16px;"></span>
-                            <input  name="nome" id="idperson" value=<? echo $id; ?> required ="required" type=hidden> 
+                            <input  name="iddd" id="idperson" value=<? echo $id; ?> required ="required" type=hidden> 
                             <div>
                             <label> Nom :</label>
-                            <input  name="nome" value=<? echo $n; ?> required ="required" type="text"  autocomplete="on"> 
+                            <input  name="nom" value=<? echo $n; ?> required ="required" type="text"  autocomplete="on"> 
                             </div>
                             <div>
                             <label > Prénom :</label> 
@@ -252,18 +255,21 @@ if(isset($_POST['search']) and isset($_POST['idPerson']) and isset($_POST['selec
                             </div>
                             <div >
                              <label>Tarif(€) :</label>
-                             <input type= "number"  id="tarif" name="nbS" required ="required" >
+                             <input type= "number"  id="tarif" name="tarif" required ="required" >
                              </div>
                              <div id="nbS">
                              <label>Nombre de séances :</label>
-                             <input type= "number"  id="nbseance" name="nbS" required ="required" >
+                             <input type= "number"  id="nbseance" name="nbS" >
                              </div>
                              <div id="dureeT">
                              <label>Durée (en jour):</label>              
-                             <input type="number" id="dureeAbonnement" name="duree" required ="required">
+                             <input type="number" id="dureeAbonnement" name="duree1" r>
                              </div>      
                              <div>
                             <button class="submit button" id="Buttonsouscription" name="connecter" type="submit" onClick="souscrire(); return false;">Souscrire</button>
+                            </div>
+                            <div>
+                           <button style= "display:none;" class="submit button" id="printB" name="connecter" type="submit">Editer le contrat</button>
                             </div>
                             </fieldset>
                       </form>

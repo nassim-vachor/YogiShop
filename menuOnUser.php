@@ -14,7 +14,7 @@
             $row= $reponse->fetch();
              $Nom=$row['Nom'];
             ?>
-            <p id="userProfil"><img src="images/userProfil.png"  alt="Bienvenue"><?php echo $Nom ?></p>
+            <p id="userProfil"> <a href="changePassword.php"><img src="images/userProfil.png"  alt="Bienvenue"><?php echo $Nom ?></p>
             <a href="services/deconnexion.php"><p class="btn">Déconnexion</p></a>
 
 
@@ -25,7 +25,7 @@
                   <ul>
                      
                     <li class="nav-item"><a href="index.php"><strong>Accueil</strong></a></li>
-                    <li class="nav-item"><a href=""><strong>Réservation</strong></strong></strong></a></li>
+                    <li class="nav-item"><a href="reservationClient.php"><strong>Réservation</strong></strong></strong></a></li>
                     <li class="nav-item"><a href="yogaInfo.php"><strong>YogiShop</strong></strong></a></li>
                     <li class="nav-item"><a href="contact.php"><strong>Nous contacter</strong></a></li>
                     

@@ -1,4 +1,8 @@
-  <?php include("header.php"); ?>
+  <?php 
+  $title="Inscription";
+  $secure_level = 2;
+
+  include("header.php"); ?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
@@ -18,7 +22,7 @@
                             </div>
 
                           <label for="nom">Nom:</label>
-                         <input  autocomplete="off" type="text" required ="required" id="nom" name="nom" placeholder="Entrez votre nom"><strong id="obliga"> *</strong id="obliga"><br>
+                         <input  autocomplete="off" type="text" required ="required" id="no1" name="nom" placeholder="Entrez votre nom"><strong id="obliga"> *</strong id="obliga"><br>
                       
                           <label for="prenom">Prenom:</label>
                           <input  autocomplete="off" type="text" required ="required" id="prenom" name="prenom" placeholder="Entrez votre prenom"><strong id="obliga"> *</strong><br>
@@ -41,7 +45,7 @@
                        <label for="codePostal">Code Postal : </label>
                       <input type="number" id="codePostal" name ="codePostal"><br>
                       <label for="Ville">Ville:</label>
-                       <input type="text" pattern="[A-Za-z]*" id="ville"  name="ville"><br>
+                       <input type="text" id="ville"  name="ville"><br>
                    
                      <div id="messageDouleur">
                      <label for="douleurs"> Autres : </label>

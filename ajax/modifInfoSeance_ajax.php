@@ -8,8 +8,9 @@ $jourSeanceModif=$_POST["jourSeanceModif"];
 $res = modifInfoSeance($jourSeanceModif,$myselectSeanceModif);
 $dateDeb=$res['datedeb'];
 $dateFin = $res['datefin'];
+$nbPlace = $res['nbPlace'];
 //$selected= $res["selected"];
 echo json_encode(array(
-	"datedeb"=>$dateDeb, "datefin"=>$dateFin
+	"datedeb"=>$dateDeb, "datefin"=>$dateFin, "nbPlace" =>$nbPlace
 ));
 ?>

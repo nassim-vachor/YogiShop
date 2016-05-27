@@ -12,7 +12,6 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="css-Bootstrap/bootstrap.css">
          <link rel="stylesheet" type="text/css" href="css/style.css">
-
         <link rel='stylesheet' type='text/css' href='https://code.jquery.com/ui/1.9.0/themes/smoothness/jquery-ui.css' />
         <link rel='stylesheet' type='text/css' href='css/jquery.weekcalendar.css' />
         

@@ -158,9 +158,7 @@ th {
    color: #337ab7;
    padding: 5px;
 }
- td {
-    padding: 5px;
-}
+
 
 
    
@@ -402,6 +400,11 @@ label {
 .user {
     width: 40%;
 }
+
+
+
+
+
 /****************bar de recherche**********************************************************/
 #barRecherche{
     width: 420px;
@@ -438,12 +441,7 @@ label {
     width: 100%;
     margin: auto;
 }
- #ficheAdherent{
-    margin-left: 5%;
-    width: 30%;
-    margin-top: 2%;
-    float: left;
-}
+
 .fiche label {
     margin-bottom: 5px;
     margin-top: 10px;
@@ -891,7 +889,7 @@ form.formSeance2 input::-webkit-input-placeholder {
 
 }
 
-    .annulButton{
+ .annulButton{
     background: #BD2E2E;
   
   -webkit-border-radius: 10;
@@ -905,7 +903,7 @@ form.formSeance2 input::-webkit-input-placeholder {
   text-decoration: none;
   width: 140px;
     float:none;
-    margin-left:140px;
+    margin-left:290px;
  /* margin-right: 40%;
   margin-left: 40%;*/
  margin-top: -40px;
@@ -916,7 +914,7 @@ form.formSeance2 input::-webkit-input-placeholder {
 
 
 #buttonCalendrier{
-margin-left: 10%;
+margin-left: 35%;
 
 
 }
@@ -1025,8 +1023,8 @@ form.formSeance3 input::-webkit-input-placeholder {
 
 }
 
-    .modifButton{
-    background: #BD2E2E;
+.modifButton{
+    background: #2EAFBD;
   
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
@@ -1039,10 +1037,9 @@ form.formSeance3 input::-webkit-input-placeholder {
   text-decoration: none;
   width: 140px;
     float:none;
-    margin-left:290px;
+    margin-left:140px;
  margin-top: -40px;
     }
-
 
 
 #modifSeance_error, #modifSeance_error2{
@@ -1089,3 +1086,108 @@ form.formSeance3 input::-webkit-input-placeholder {
 .wc-header .wc-today.wc-user-header{font-weight:normal;}
 .wc-today.wc-day-column-last{border-right:3px double #FAD163;}
 .wc-today.wc-day-column-first{border-left:3px double #FAD163;}
+.wc-time-slots * {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+}
+
+/* couleur client event*/ 
+
+.calendar-subscribe-input {
+    font-size: 22px;
+    border-radius: 5px;
+    border: 1px solid  #51CB20;
+    padding: 4px;
+    margin-top: 10px;
+}
+.wc-cal-event.eventSubscribed {
+    background-color: #51CB20;
+}
+.wc-cal-event.eventNotSubscribed .calendar-subscribe-input{
+background-color: #51CB20;
+
+}
+
+.wc-cal-event.eventSubscribed .calendar-subscribe-input {
+    background-color: rgb(244, 6, 6);
+}
+
+.wc-cal-event.eventSubscribed .time {
+    background-color: '#999';
+    border: 1px solid #888;
+}
+
+
+/**************************************************************************************************/
+#secYogishop{
+    width: 100%;
+    margin-top: 20px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+#imagePrint{
+    width: 30%;
+     margin-top: 30px;
+     float: left;
+}
+#imagePrint img {
+    width: 70%;
+    float: left;
+}
+#YogiS{
+    width: 30%;
+    float:right;
+    text-align: center;
+   margin-top: -10px;
+}
+#YogiS h1{
+    font-size: 20px;
+}
+#infoContrat{
+    margin-left: 20px;
+    width: 100%;
+}
+#infoContrat label{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#infoPerso{
+    width: 40%;
+    float:left;
+
+}
+#detailAbo{
+    width: 40%;
+    float:right;
+    margin-right: 30px;
+}
+#titreContrat{
+   width: 30%;
+   float: right;
+   text-align: center;
+   margin-top: 100px;
+   margin-right: 45px;
+   border: solid;
+}
+#titreContrat h1{
+    font-size: 24px;
+}
+
+#tout{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 930px;
+    border: solid;
+}
+#imprimer{
+    margin-top: 10%;
+
+}
+
+/***********************************Impression fini ****************************************************/
+
+#calendar2{
+    margin-top: 70px;
+}

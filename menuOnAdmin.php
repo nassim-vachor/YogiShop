@@ -10,7 +10,7 @@
             $row= $reponse->fetch();
              $Nom=$row['Nom'];
             ?>
-            <p id="userProfil"><img src="images/userProfil.png"  alt="Bienvenue"><?php echo $Nom ?></p>
+            <p id="userProfil"> <a href="changePassword.php"><img src="images/userProfil.png"  alt="Bienvenue"><?php echo $Nom ?></p>
            <a href="services/deconnexion.php"><p class="btn" id="btnAdmin">Déconnexion</p></a>
 				 <div class="logo"> </div>
                   

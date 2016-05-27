@@ -1,6 +1,6 @@
 <?php 
 
-require_once("../services/seances.php");
+require_once("../services/seancesClient.php");
 
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -21,10 +21,10 @@ if($method === "GET") {
 	$dateDeb=$_GET["dateDeb"]; //timestamp
 	$dateFin=$_GET["dateFin"]; //timestamp
 
-	$resultat=getSeance(date('Y-m-d\TH:i:s\Z', $dateDeb ),date('c', $dateFin ));
+	$resultat=getSeanceClient(date('Y-m-d\TH:i:s\Z', $dateDeb ),date('c', $dateFin ));
 	echo json_encode(array_map("format", $resultat)); 
 }
-
+/*
 elseif ($method === "POST") {
 	//pour ajouter une seance 
 	$jourSeance = $_POST["jourSeance"]; 
@@ -39,7 +39,7 @@ elseif ($method === "POST") {
 		"estInserer" => $estInserer
 	));
 
-}
+}*/
 
 
 ?>

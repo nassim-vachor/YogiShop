@@ -1,5 +1,8 @@
 
-	<?php include("header.php");
+	<?php 
+  $title="Abonnement";
+$secure_level = 2;
+  include("header.php");
      
      ?>
 

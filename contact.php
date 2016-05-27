@@ -1,4 +1,7 @@
-	<?php include("header.php"); ?>
+	<?php 
+	$title="Contact";
+	$secure_level = 0;
+	include("header.php"); ?>
 
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
@@ -10,7 +13,7 @@
 		
 		<h1> Gérard Galindo </h1>
 		<h2> Yoghishop </h2>
-		<h3 id ="adress">9 Rue des Chasseurs</br> 34920 Le Crès </h3>
+		<h3 id ="adress">9 Avenue des Chasseurs</br> 34920 Le Crès </h3>
 		<h3> <span style = " color: #d4444a" > Téléphone : </span> 06 19 53 58 55 </h3>
 
 		<h3 id ="email">

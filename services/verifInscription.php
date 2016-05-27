@@ -12,9 +12,9 @@ function updateClientByAdmin() {
     
       $id=$_POST['idPerson'];
       $nom=$_POST['nom1'];
+      $age=$_POST["age"];
       $prenom=$_POST['prenom1'];
       $email=$_POST['email'];
-      $age=$_POST['age'];
       $genre=$_POST['sexe'];
       $telephone=$_POST['tel'];
       $ville=$_POST['ville'];
@@ -23,7 +23,7 @@ function updateClientByAdmin() {
       $job=$_POST['job'];
       $douleurs=$_POST['douleurs'];
       $req=$dbh->query("UPDATE Person SET Nom='$nom', Prenom='$prenom', DateNais='$age',tel='$telephone'
-                    ,email = '$email',Ville = '$ville',CodePostal='$cp',Rue='$rue',Douleurs='$rue',Sexe='$genre', Profession='$job' 
+                    ,email = '$email',Ville = '$ville',CodePostal='$cp',Rue='$rue',Douleurs='$douleurs',Sexe='$genre', Profession='$job' 
                      WHERE idPerson='$id'")
           ?>     
       
@@ -33,8 +33,53 @@ function updateClientByAdmin() {
     }
       
 }
+function modifabonnementClient(){
+    $dbh = connect();
+   if(isset($_POST['enreg'])){
+    $nom=$_POST['nom2'];
+    $prenom=$_POST['prenom2'];
+     $id=$_POST['idPerso'];
+     $nbs=$_POST['nbs'];
+      $duree=$_POST['duree'];
+     
+      $req=$dbh->query("UPDATE Person SET NbSeances='$nbs', DateExpiration='$duree' 
+                     WHERE idPerson='$id'");      
+ ?>     
+      
+     <p id ="modifSaved"><?php echo "l'abonnement du client \"$nom $prenom\"  a été bien mis à jour";?></p>
+    <?php 
+}
+}
+function updateProfil() {
+    
+   $dbh = connect();
+    if(isset($_POST['modif']))
+    {
+    
+      $id=$_POST['idPerson'];
+      $nom=$_POST['nom1'];
+      $prenom=$_POST['prenom1'];
+      $email=$_POST['email'];
+      $age=$_POST["age"];
+      $genre=$_POST['sexe'];
+      $telephone=$_POST['tel'];
+      $ville=$_POST['ville'];
+      $cp=$_POST['cp'];
+      $rue=$_POST['rue'];
+      $job=$_POST['job'];
+      $req=$dbh->query("UPDATE Person SET Nom='$nom', Prenom='$prenom', DateNais='$age',tel='$telephone'
+                    ,email = '$email',Ville = '$ville',CodePostal='$cp',Rue='$rue',Sexe='$genre', Profession='$job' 
+                     WHERE idPerson='$id'")
+          ?>     
+      
+        <p style= "font-size: 26px; width: 30%; margin-left: 35%; margin-top:6%; text-align:center;
+        color:#2c4271">Votre profil a bien été mis à jour</p>
+    <?php 
+           
+    }
 
-
+      
+}
 
 
 
